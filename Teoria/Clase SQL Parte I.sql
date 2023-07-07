@@ -1,41 +1,45 @@
--- Clase Teorica SQL Parte I
-/*Crear base de datos
---Con parametros
+-- CLASE TEORICA SQL PARTE I
+
+/* Crear base de datos
+
+-- Con parametros
+
 CREATE DATABASE UNLAM2021  --Pone por default [] para caracteres especiales, en este caso lo puedo sacar
  CONTAINMENT = NONE
- ON  PRIMARY	--Es el archivo de datos que voy a definir. Toda BDD tiene un archivo .log y otro archivo de datos
+ ON  PRIMARY	-- Es el archivo de datos que voy a definir. Toda BDD tiene un archivo .log y otro archivo de datos
 ( NAME = N'UNLAM2021', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\UNLAM2021.mdf' , 
 SIZE = 512KB , MAXSIZE = 102400KB , FILEGROWTH = 1MB )
  LOG ON 
 ( NAME = N'UNLAM2021_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\UNLAM2021.ldf' , 
-SIZE = 512KB , MAXSIZE = 51200KB , FILEGROWTH = 1MB )	--Establezco un tamaño inicial, tamaño maximo y de a cuanto va a crecer esta BDD
+SIZE = 512KB , MAXSIZE = 51200KB , FILEGROWTH = 1MB )	-- Establezco un tamanio inicial, tamanio maximo y de a cuanto va a crecer esta BDD
 GO
 
---Voy a crearla sin parametros con la instruccion CREATE 
+-- Voy a crearla sin parametros con la instruccion CREATE 
+
 CREATE DATABASE UNLAM2021_B
 DROP DATABASE UNLAM2021_B
 
---Crear una tabla
+-- Crear una tabla
 CREATE TABLE ALUMNO(Legajo int not null,nya varchar(100))
 */
 
 /*Uso del INSERT*/
 
-USE [AdventureWorks2017]						--Indica en que base de datos voy a trabajar
-SELECT * FROM Person.Person						--Muestra todos los campos de la tabla
-SELECT FirstName FROM Person.Person				--Muestra unicamente el campo FirstName
-SELECT FirstName,LastName FROM Person.Person	--Muestra unicamente los campos FirstName y LastName
+USE [AdventureWorks2017]						-- Indica en que base de datos voy a trabajar
+SELECT * FROM Person.Person						-- Muestra todos los campos de la tabla
+SELECT FirstName FROM Person.Person				-- Muestra unicamente el campo FirstName
+SELECT FirstName,LastName FROM Person.Person	-- Muestra unicamente los campos FirstName y LastName
 
---Otra forma de declaracion (con enters xd)
-SELECT 
+--Otra forma de declaracion (Con enters)
+SELECT
 	FirstName,
-	LastName 
+	LastName
 FROM
 	Person.Person
 
---Otra forma
---SELECT TOP 5							--TOP 5 = cantidad maxima que quiero que muestre, muestra las primeras 5 en este caso, si el la cantidad de TOP supera la cantidad que hay en los campos, muestra todos
-SELECT DISTINCT FirstName--,LastName	--DISTINCT= ofrece valores distintos por fila (si hay nombres repetidos los omite)
+-- Otra forma
+-- SELECT TOP 5							-- TOP 5 = cantidad maxima que quiero que muestre, muestra las primeras 5 en este caso, si el la cantidad de TOP supera la cantidad que hay en los campos, muestra todos
+SELECT DISTINCT FirstName--,LastName	-- DISTINCT= ofrece valores distintos por fila (si hay nombres repetidos los omite)
 FROM Person.Person
 WHERE
 	--FirstName='Alan' OR FirstName='Jenny' OR FirstName='Bianca'
@@ -50,14 +54,14 @@ FROM
 	--Person.Person as p
 	Person.Person p
 WHERE
-	--FirstName LIKE 'A%'			--Muestra todas aquellas personas que comienzen con A. El % es parecido al *, muestra todos los valores posible que siguen
-	--FirstName LIKE 'Al%'			--Muestra todas aquellas personas que comienzen con Al
-	FirstName LIKE 'Al%a'			--Muestra todas aquellas personas que comienzen con Al y que terminen en a
-	--FirstName LIKE '%a'			--Muestra todas aquellas personas que terminen con a
-	--FirstName LIKE 'Ale%a'		--Muestra todas aquellas personas que comienzen con Ale y que terminen en a
-	--FirstName LIKE 'ale_a'		--Muestra todas aquellas personas que comienzen con ale y que terminen en a. El _ hace referencia a que muestra un unico caracter
-	--FirstName LIKE 'ale%a' AND ApellidoMayuscula='BELL'	--MAL!! No ejecuta porque no reconoce alias
-	--FirstName LIKE 'ale%a' AND upper(LastName)='BELL'		--Forma correcta
+	--FirstName LIKE 'A%'			-- Muestra todas aquellas personas que comienzen con A. El % es parecido al *, muestra todos los valores posible que siguen
+	--FirstName LIKE 'Al%'			-- Muestra todas aquellas personas que comienzen con Al
+	FirstName LIKE 'Al%a'			-- Muestra todas aquellas personas que comienzen con Al y que terminen en a
+	--FirstName LIKE '%a'			-- Muestra todas aquellas personas que terminen con a
+	--FirstName LIKE 'Ale%a'		-- Muestra todas aquellas personas que comienzen con Ale y que terminen en a
+	--FirstName LIKE 'ale_a'		-- Muestra todas aquellas personas que comienzen con ale y que terminen en a. El _ hace referencia a que muestra un unico caracter
+	--FirstName LIKE 'ale%a' AND ApellidoMayuscula='BELL'	-- MAL!! No ejecuta porque no reconoce alias
+	--FirstName LIKE 'ale%a' AND upper(LastName)='BELL'		-- Forma correcta
 ORDER BY
 	ApellidoMayuscula
 
@@ -103,7 +107,7 @@ ORDER BY FirstName
 
 /*--Uso del EXISTS
 --Devuelve todos los valores, ya que en AlgunosValores hay al menos un valor
-WHERE EXISTS (SELECT * FROM AlgunosValores)	--V ó F
+WHERE EXISTS (SELECT * FROM AlgunosValores)	--V o F
 --Aunque se encuentre el nombre Ken en AlgunosValores, devuelve TODOS los valores ya que da verdadero
 WHERE EXISTS (SELECT * FROM AlgunosValores WHERE Nombre='Ken')
 

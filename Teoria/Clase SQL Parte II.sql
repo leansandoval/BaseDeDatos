@@ -98,6 +98,7 @@ INSERT INTO Cursa VALUES
 (13,302);
 
 /*********************************************** SUM() *************************************************/
+
 -- Suma todos los elementos la columna dentro de la funcion 
 SELECT SUM(e.Salario) AS TotalSalarios
 FROM Empleado AS e
@@ -107,11 +108,13 @@ FROM Empleado AS e, Departamento AS d
 WHERE e.CodDepto = d.CodDepto AND d.Descripcion = 'Sistemas'
 
 /*********************************************** MAX() - MIN () *************************************************/
+
 SELECT MIN(e.Salario) AS SueldoMinimoCategoriaA, MAX(e.Salario) AS SueldoMaximoCategoriaA
 FROM Empleado AS e
 WHERE e.Categoria='A'
 
 /*********************************************** COUNT() *************************************************/
+
 SELECT COUNT(*) AS CantidadDepartamentos
 FROM Departamento
 
@@ -138,7 +141,7 @@ GROUP BY e.Categoria				-- Las columnas normales (no agrupadas) siempre DEBEN es
 
 SELECT COUNT(*) AS CantidadEmpleadosPorCategoria
 FROM Empleado AS e
-GROUP BY e.Categoria				-- Pero en el GROUP BY es posible colocar columnas que no estén en el SELECT
+GROUP BY e.Categoria				-- Pero en el GROUP BY es posible colocar columnas que no estï¿½n en el SELECT
 
 /*********************************************** HAVING *************************************************/
 -- Listar la cantidad de Empleados por cada Departamento que tengan mas de 1 empleado
@@ -162,6 +165,7 @@ GROUP BY e.Categoria
 HAVING SUM(e.Salario) > 200000
 
 -- Listar la cantidad de empleados unicamente que su departamento empiecen con C
+
 /*SELECT d.Descripcion, COUNT(*) AS CantidadEmpleados
 FROM Departamento AS d INNER JOIN Empleado AS e ON d.CodDepto = e.CodDepto
 GROUP BY d.Descripcion
@@ -177,16 +181,17 @@ GROUP BY d.Descripcion
 
 SELECT Descripcion, COUNT(*) AS CantidadEmpleados
 FROM Departamento, Empleado, Tabla3
-WHERE Departamento.CodDepto = Empleado.CodDepto AND ...
+WHERE Departamento.CodDepto = Empleado.CodDepto
 GROUP BY Descripcion
 HAVING COUNT(*) > 1
 
 SELECT d.Descripcion, COUNT(*) AS CantidadEmpleados
-FROM Departamento AS d INNER JOIN Empleado AS e ON d.CodDepto = e.CodDepto INNER JOIN Tabla3 AS t3 ON ...
+FROM Departamento AS d INNER JOIN Empleado AS e ON d.CodDepto = e.CodDepto INNER JOIN Tabla3 AS t3 ON t3.CodDepto = e.CodDepto
 GROUP BY d.Descripcion
 HAVING COUNT(*) > 1
 
 -- No se puede usar alias en HAVING, pero si se puede anidar una consulta para luego usar su alias en las proximas
+
 SELECT * 
 FROM (SELECT d.Descripcion, COUNT(*) AS Cantidad
 	  FROM Departamento AS d INNER JOIN Empleado AS e ON d.CodDepto = e.CodDepto
@@ -194,37 +199,45 @@ FROM (SELECT d.Descripcion, COUNT(*) AS Cantidad
 WHERE a.Cantidad>1
 
 /*********************************************** ORDER BY *************************************************/
+
 -- El orden es importante
+
 SELECT *
 FROM Empleado AS e
 ORDER BY e.CodDepto, e.Categoria, e.Salario DESC	
 
 -- Fijarse los valores NULL
+
 SELECT *
 FROM Empleado AS e
 ORDER BY e.Telefono DESC							
 
 -- Ordena usando el alias
+
 SELECT e.Nombre, e.Salario AS Sueldo
 FROM Empleado AS e
 ORDER BY Sueldo										
 
 -- Ordena por numero de columnas: esto se puede hacer con columnas que se encuentren en el SELECT (no en la tabla)
+
 SELECT e.Nombre, e.Apellido, e.Salario
 FROM Empleado AS e
 ORDER BY 3,2										-- Ordena por Salario (Columna 3) y luego por Apellido (Columna 2)
 
 -- Ordena por alias de columnas derivadas
+
 SELECT e.Nombre, e.Apellido, e.Salario AS SueldoEnPesos, ROUND(salario/185,2) AS SueldoEnUSD	
 FROM Empleado AS e		--La funcion ROUND redondea en decimales
 ORDER BY SueldoEnUSD								
 
--- Tambien se puede por columnas derivadas que no aparezcan	
+-- Tambien se puede por columnas derivadas que no aparezcan
+
 SELECT e.Nombre, e.Apellido, e.Salario AS SueldoEnPesos	
 FROM Empleado AS e
 ORDER BY ROUND(salario/185,2) 						
 
 -- Despues de un GROUP BY no podemos hacer ORDER BY por columnas que no esten dentro del SELECT
+
 SELECT e.Categoria, SUM(e.Salario) AS TotalSueldos
 FROM Empleado AS e
 WHERE e.Salario > 80000
@@ -233,6 +246,7 @@ HAVING SUM(e.Salario) > 150000
 ORDER BY TotalSueldos
 
 -----------------------------------------------------------------------------------------------------------
+
 -- Ejemplo de NOT EXISTS: listar los Departamentos en los cuales NO trabaja ningun empleado
 
 INSERT INTO Departamento VALUES (6,'Sanidad')
@@ -247,6 +261,7 @@ WHERE NOT EXISTS (SELECT *
 -- OJO !! No es un cociente
 
 -- Forma 1:
+
 SELECT *
 FROM Alumno AS a
 WHERE NOT EXISTS (SELECT *
@@ -254,23 +269,25 @@ WHERE NOT EXISTS (SELECT *
 				  WHERE c.Legajo = a.Legajo)
 
 -- Forma 2:
+
 SELECT a.*
 FROM Alumno AS a
 WHERE a.Legajo NOT IN (SELECT Legajo
 					   FROM Cursa AS c)
 
 -- Forma 3:
+
 SELECT a.Legajo
 FROM Alumno AS a
 EXCEPT
 SELECT c.Legajo
 FROM Cursa AS c
 
------------------------------------------------------------------------------------------------------------
-
 /*********************************************** COCIENTE *************************************************/
--- Listar los legajos y apellidos de los alumnos que cursan todas las materias de tercer año
--- Otra forma de decir: Listar los Alumnos tales que NO EXISTE una Materia de tercer año que NO cursen
+
+-- Listar los legajos y apellidos de los alumnos que cursan todas las materias de tercer anio
+-- Otra forma de decir: Listar los Alumnos tales que NO EXISTE una Materia de tercer anio que NO cursen
+
 SELECT a.*
 FROM Alumno AS a
 WHERE NOT EXISTS (SELECT 1
@@ -282,6 +299,7 @@ WHERE NOT EXISTS (SELECT 1
 
 -- Otra forma de resolverlo:
 -- Esta condicion va en el HAVING de abajo
+
 SELECT COUNT(*)
 FROM Materia AS m
 WHERE m.AnioCarrera=3
@@ -301,28 +319,28 @@ SELECT a.Legajo, a.Apellido
 FROM Alumno AS a
 WHERE NOT EXISTS (SELECT *						-- "Tales que NO EXISTE una materia de 3er anio"
 				  FROM Materia AS m
-				  WHERE m.Carrera = '0 - Ingeniería en Informática' AND m.Descripcion LIKE 'Materia3%'
+				  WHERE m.Carrera = '0 - Ingenieria en Informatica' AND m.Descripcion LIKE 'Materia3%'
 				  AND NOT EXISTS (SELECT *		-- "Que no hayan aprobado"
 								  FROM Nota AS n
 								  WHERE n.Legajo=a.Legajo AND n.cod_materia=m.cod_materia AND n.nota>=4	)
 				)						-- Mismo alumno				-- Misma materia		-- Que hayan aprobado
 
 --Otra forma de resolver el cociente (no recomendada)
--- Contamos cuantas materias hay en 3er año (condicion del HAVING de abajo)
+-- Contamos cuantas materias hay en 3er anio (condicion del HAVING de abajo)
 SELECT COUNT(*) AS Cantidad_Materias_3er_Anio
 FROM Materia as m
-WHERE m.Carrera = '0 - Ingeniería en Informática' AND m.Descripcion LIKE 'Materia3%'
+WHERE m.Carrera = '0 - Ingenieria en Informatica' AND m.Descripcion LIKE 'Materia3%'
 
---Contamos cuantas materias de 3er año aprobo cada alumno
+--Contamos cuantas materias de 3er anio aprobo cada alumno
 SELECT n.Legajo, COUNT(*) CantidadMateriasAprobadas
 FROM Nota AS n							
 WHERE n.Nota> = 4 AND n.CodMateria IN (SELECT m.CodMateria						--Aprobados. IN es equivalente a un pertenece						
-									   FROM Materia AS m						--Unicamente materias de tercer año
-									   WHERE m.Carrera = '0 - Ingeniería en Informática' AND m.Descripcion LIKE 'Materia3%')
+									   FROM Materia AS m						--Unicamente materias de tercer anio
+									   WHERE m.Carrera = '0 - Ingenieria en Informatica' AND m.Descripcion LIKE 'Materia3%')
 GROUP BY n.LEGAJO																--Quienes son los alumnos que aprobaron todas
-HAVING COUNT(*) = (SELECT COUNT(*) AS CantidadMaterias3erAnio					--Cuantas materias hay en tercer año
+HAVING COUNT(*) = (SELECT COUNT(*) AS CantidadMaterias3erAnio					--Cuantas materias hay en tercer anio
 				   FROM Materia as m
-				   WHERE m.Carrera = '0 - Ingeniería en Informática' AND m.Descripcion LIKE 'Materia3%')
+				   WHERE m.Carrera = '0 - Ingenieria en Informatica' AND m.Descripcion LIKE 'Materia3%')
 
 -- Listar los Clientes que Comparon en todas las Sucursales de Avellaneda
 -- Otra forma de decir: Listar los Clientes tales que NO EXISTE una Sucursal de Avellaneda en la que NO HAYAN Comprado
@@ -351,7 +369,8 @@ WHERE NOT EXISTS (SELECT 1
 									WHERE a.Legajo = e.Legajo AND p.IdProyecto = a.IdProyecto)
 				 )
 
-/********* Ejercicio de Parcial ***********/
+/****************** Ejercicio de Parcial ********************/
+
 /*
 Comercio (Id, Nombre, IdCategoria, IdPartido)
 Pedido (Id, IdUsuario, NroDireccionUsuario, Fecha, Monto, IdDelivery, IdComercio, IdMedioPago)
@@ -369,13 +388,16 @@ Provincia (Id, Nombre)
 -- Listar los usuarios que han realizado en TODOS lo Comercios de categoria 'Sushi'
 -- del partido de Moron entre el 01/01/2020 y 01/07/2021
 
-CREATE VIEW SushiMoron AS
-(
+GO
+
+CREATE VIEW SushiMoron AS (
 	SELECT co.Id
 	FROM Comercio AS co INNER JOIN Categoria AS ca ON co.IdCategoria = ca.Id 
 						INNER JOIN Partido AS p ON p.Id = co.IdPartido
 	WHERE ca.Descripcion = 'Sushi' AND p.Nombre = 'Moron'
 )
+
+GO
 
 -- Listar los Usuarios tales que NO EXISTE un Comercio de Sushi de Moron en el que NO haya hecho 
 -- un PEDIDO entre el 01/01/2020 y 01/07/2021
@@ -392,7 +414,7 @@ WHERE NOT EXISTS (SELECT *
 
 /*********************************************** VIEW *************************************************/
 
-/* ¿Las vistas ocupan espacio en la Base de Datos? No, las vistas no ocupan espacio porque no contienen 
+/* Las vistas ocupan espacio en la Base de Datos? No, las vistas no ocupan espacio porque no contienen 
 datos (solo ocupan un espacio MINIMO correspondiente al texto de la consulta)*/
 
 CREATE VIEW Vista1 AS
@@ -487,6 +509,7 @@ SET Legajo = 115
 WHERE Legajo = 105
 
 /*********************************************** INSERT *************************************************/
+
 --INSERT INTO Empleado VALUES (120,'Laura','Garcia',800000,'C','333-456',5)
 --INSERT INTO Empleado VALUES (120,'Laura','Garcia',800000,'C',NULL,5)						--Con valores NULL
 INSERT INTO Empleado (Legajo,Nombre,Apellido,CodDepto) VALUES (120,'Laura','Garcia',5)		--Indicando columnas, las que no estan indicadas quedan con NULL
@@ -511,7 +534,7 @@ CREATE TABLE Empleado2
 INSERT INTO Empleado2	--Insertar 3 filas en Empleado2
 SELECT *
 FROM Empleado AS e
-WHERE e.cod_depto=5		--Únicamente las que tengan el código 5
+WHERE e.cod_depto=5		--Unicamente las que tengan el codigo 5
 
 /*********************************************** DELETE *************************************************/
 DELETE Empleado			--Borra todas las filas de la tabla

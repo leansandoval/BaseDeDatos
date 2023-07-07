@@ -21,10 +21,10 @@ INSERT INTO Cliente (NroCliente, RazonSocial) VALUES
 (10,'28378');
 
 INSERT INTO Festejo (NroFestejo, Descripcion, Fecha, NroCliente) VALUES
-(1,'15 años',GETDATE(),1),
-(2,'Cumpleaños','22-10-2021',4),
+(1,'15 aÃ±os',GETDATE(),1),
+(2,'CumpleaÃ±os','22-10-2021',4),
 (3,'Casamiento','12-12-2021',10),
-(4,'15 años','08-10-2021',5),
+(4,'15 aÃ±os','08-10-2021',5),
 (5,'Bautismo','15-05-2021',2),
 (6,'Casamiento','30-01-2021',5);
 

@@ -1,10 +1,10 @@
 /*Ejercicio 2:
 
-	GaleríaDeArte (Id, Nombre, Disponible, Calle, Nro, Localidad)
+	GaleriaDeArte (Id, Nombre, Disponible, Calle, Nro, Localidad)
 	Obra (Id, Nombre, Material, IdTipo, IdAutor)
 	TipoDeObra (Id, Descripcion)
-	Temática (Id, Descripcion)
-	Exposición (IdGaleria, IdObra, IdTematica, Fecha, Sala)
+	Tematica (Id, Descripcion)
+	Exposicion (IdGaleria, IdObra, IdTematica, Fecha, Sala)
 	Autor (Id, NyA, FechaNacimiento)*/
 
 CREATE DATABASE GuiaResueltaEjercicio2
@@ -38,7 +38,7 @@ CREATE TABLE TipoDeObra
 CREATE TABLE Tematica
 (
 	Id INT PRIMARY KEY, 
-	Descripción	VARCHAR (50)
+	Descripcion	VARCHAR (50)
 );
 
 CREATE TABLE Obra
@@ -80,13 +80,13 @@ INSERT INTO Autor (Id, NyA, FechaNacimiento) VALUES
 (5, 'Man Ray', '1890-08-27');
 
 INSERT INTO TipoDeObra (Id, Descripcion) VALUES
-(1,'Dadaísmo'),
+(1,'Dadaismo'),
 (2,'Surrealismo'),
 (3,'Pop art'),
 (4,'Art Deco'),
 (5,'Minimalismo');
 
-INSERT INTO Tematica (Id, Descripción) VALUES 
+INSERT INTO Tematica (Id, Descripcion) VALUES 
 (1,'Oregon'),
 (2,'Paisaje'),
 (3,'Emociones'),
@@ -112,19 +112,23 @@ INSERT INTO Exposicion (IdGaleria, IdObra, IdTematica, Fecha, Sala) VALUES
 (2,2,1,GETDATE(),1),
 (5,4,1,'01-02-2021',2);
 
-/*a - Obtener el nombre de la galería de arte, la descripción de la temática presentada y la fecha de 
-realización, cuando la exposición tuvo la mayor cantidad de obras en expuestas. Sólo se mostrarán los resultados
-siempre y cuando la galería de arte haya presentado todas las temáticas disponibles o haya expuesto distintas 
+/*a - Obtener el nombre de la galeria de arte, la descripcion de la tematica presentada y la fecha de 
+realizacion, cuando la exposicion tuvo la mayor cantidad de obras en expuestas. Solo se mostraran los resultados
+siempre y cuando la galeria de arte haya presentado todas las tematicas disponibles o haya expuesto distintas 
 obras a tal punto de haber presentado todos los tipos de obra disponibles.*/
 
+GO
 CREATE OR ALTER VIEW v_Exposicion_Cantidad_Obras AS
 (
 	SELECT DISTINCT e.IdGaleria, e.IdTematica, e.Fecha, COUNT(e.IdObra) 'Cantidad Obras'
 	FROM Exposicion AS e
 	GROUP BY e.IdGaleria, e.IdTematica, e.Fecha
 )
+GO
 
 -- Exposicion que tuvo la mayor cantidad de obras expuestas (Por galeria, tematica y fecha)
+
+GO
 CREATE OR ALTER VIEW v_Exposicion_ObrasMax AS
 (
 	SELECT eco.IdGaleria, eco.IdTematica, eco.Fecha
@@ -132,8 +136,11 @@ CREATE OR ALTER VIEW v_Exposicion_ObrasMax AS
 	WHERE eco.[Cantidad Obras] = (SELECT MAX(eco.[Cantidad Obras]) 
 								  FROM v_Exposicion_Cantidad_Obras AS eco)
 )
+GO
 
 -- Galerias de arte que presentaron todas las tematicas disponibles.
+
+GO
 CREATE OR ALTER VIEW v_Galeria_TodasTematicas AS
 (
 	SELECT e.IdGaleria, COUNT(DISTINCT e.IdTematica) AS 'Tematicas Presentadas'
@@ -142,8 +149,11 @@ CREATE OR ALTER VIEW v_Galeria_TodasTematicas AS
 	HAVING COUNT(DISTINCT e.IdTematica) = (SELECT COUNT(*) 'Cantidad de tematicas'
 										   FROM Tematica)
 )
+GO
 
 -- Galerias de arte que expusieron obras, que tengan todos los tipos de obra disponibles.
+
+GO
 CREATE OR ALTER VIEW  v_Galeria_TodosTiposObra AS
 (
 	SELECT e.IdGaleria, COUNT(DISTINCT o.IdTipo) AS 'Cantidad Tipos Obra'
@@ -152,8 +162,9 @@ CREATE OR ALTER VIEW  v_Galeria_TodosTiposObra AS
 	HAVING COUNT(DISTINCT o.IdTipo) = (SELECT COUNT(*) 'Cantidad Tipos de Obra'
 									   FROM TipoDeObra)
 )
+GO
 
-SELECT g.Nombre, t.Descripción, eom.Fecha
+SELECT g.Nombre, t.Descripcion, eom.Fecha
 FROM GaleriaDeArte AS g  INNER JOIN v_Exposicion_ObrasMax AS eom ON eom.IdGaleria = g.Id
 						 INNER JOIN Tematica AS t ON eom.IdTematica = t.Id
 WHERE eom.IdGaleria IN (SELECT gtt.IdGaleria 
@@ -161,11 +172,13 @@ WHERE eom.IdGaleria IN (SELECT gtt.IdGaleria
    OR eom.IdGaleria IN (SELECT gtto.IdGaleria 
 						FROM v_Galeria_TodosTiposObra AS gtto)
 
-/*b - Se requiere crear un procedimiento almacenados o función para generar una nueva exposición, por lo tanto 
-se desea recibir por parámetro, el id de la galería de arte, id de la temática, id de la obra a participar y 
-la fecha. Si la exposición no existe se deberá asignar el número de sala “1”, pero si la exposición ya existiera 
-deberá utilizarse el número de sala previamente cargado para la misma.
-Aclaración: Deberá validar que los id recibidos por parámetros existan en las tablas correspondientes.*/
+/*b - Se requiere crear un procedimiento almacenados o funcion para generar una nueva exposicion, por lo tanto 
+se desea recibir por parametro, el id de la galeria de arte, id de la tematica, id de la obra a participar y 
+la fecha. Si la exposicion no existe se debera asignar el numero de sala ï¿½1ï¿½, pero si la exposiciï¿½n ya existiera 
+debera utilizarse el numero de sala previamente cargado para la misma.
+Aclaracion: Debera validar que los id recibidos por parametros existan en las tablas correspondientes.*/
+
+GO
 
 CREATE OR ALTER PROCEDURE p_Nueva_Exposicion (@IdGaleria INT, @IdObra INT, @IdTematica INT, @Fecha DATE)
 AS

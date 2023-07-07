@@ -7,7 +7,7 @@ INSERT INTO Genero (Id, Nombre) VALUES
 (3,'Drama'),
 (4,'Accion'),
 (5,'Infantil'),
-(6,'Ciencia Ficción');
+(6,'Ciencia Ficcion');
 
 INSERT INTO Director (ID, NyA) VALUES 
 (1,'David Lynch'),

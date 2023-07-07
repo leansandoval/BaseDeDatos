@@ -24,11 +24,6 @@ CREATE TABLE Cliente
 	Borrado TINYINT DEFAULT 2
 );
 
-drop table Pelicula
-drop table Alquiler
-drop table Ejemplar
-drop table Cliente
-
 CREATE TABLE Pelicula 
 (
 	CodPel INT NOT NULL PRIMARY KEY ,
@@ -60,3 +55,8 @@ CREATE TABLE Alquiler
 	--CONSTRAINT FK_Alquiler_NroEjemplar_CodPel FOREIGN KEY (NroEjemplar, CodPel) REFERENCES Ejemplar(Numero, CodPel),
 	--CONSTRAINT FK_Alquiler_CodCli FOREIGN KEY (CodCli) REFERENCES Cliente(CodCli)
 );
+
+--DROP TABLE Pelicula
+--DROP TABLE Alquiler
+--DROP TABLE Ejemplar
+--DROP TABLE Cliente
