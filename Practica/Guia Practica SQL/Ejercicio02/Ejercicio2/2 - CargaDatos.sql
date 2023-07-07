@@ -9,9 +9,7 @@ INSERT INTO [dbo].[Proveedor] ([NomProv], [Categoria], [CiudadProv]) VALUES ('Pr
 INSERT INTO [dbo].[Proveedor] ([NomProv], [Categoria], [CiudadProv]) VALUES ('Prov5','Cat5', 'Gonzalez Catan')
 INSERT INTO [dbo].[Proveedor] ([NomProv], [Categoria], [CiudadProv]) VALUES ('Prov6','Cat6', 'Ramos Mejia')
 
---
-
---[dbo].[Articulo]
+--Articulo
 INSERT INTO [dbo].[Articulo] ([Descripcion], [CiudadArt], [Precio]) VALUES ('Art1','San Justo', 50.20) 
 INSERT INTO [dbo].[Articulo] ([Descripcion], [CiudadArt], [Precio]) VALUES ('Art2','Laferrere', 5000.520)
 INSERT INTO [dbo].[Articulo] ([Descripcion], [CiudadArt], [Precio]) VALUES ('Art3','Gonzalez Catan', 80010)
@@ -53,7 +51,7 @@ INSERT INTO [dbo].[Pedido] ( [NroArt], [NroCli], [NroProv], [FechaPedido], [Cant
 INSERT INTO [dbo].[Pedido] ( [NroArt], [NroCli], [NroProv], [FechaPedido], [Cantidad], [PrecioTotal]) VALUES (5,1,4,GETDATE(),999,9000)
 INSERT INTO [dbo].[Pedido] ( [NroArt], [NroCli], [NroProv], [FechaPedido], [Cantidad], [PrecioTotal]) VALUES (5,5,5,GETDATE(),20,9000)
 
---[Stock]
+--Stock
 
 INSERT INTO [dbo].[Stock]([NroArt], [fecha], [cantidad]) VALUES (1, '20200101',1254)
 INSERT INTO [dbo].[Stock]([NroArt], [fecha], [cantidad]) VALUES (1, '20200201',300)

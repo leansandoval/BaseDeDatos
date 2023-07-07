@@ -13,7 +13,7 @@ GO
 
 /*
 	Proveedor (NroProv, NomProv, Categoria, CiudadProv)
-	Artículo  (NroArt, Descripción, CiudadArt, Precio)
+	Articulo  (NroArt, Descripcion, CiudadArt, Precio)
 	Cliente   (NroCli, NomCli, CiudadCli)
 	Pedido    (NroPed, NroArt, NroCli, NroProv, FechaPedido, Cantidad, PrecioTotal)
 	Stock     (NroArt, fecha, cantidad)

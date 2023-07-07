@@ -1,8 +1,8 @@
--- Creación de la base de datos
+-- Creacion de la base de datos
 CREATE DATABASE Ejercicio_1;
 GO
 
---Creación de las tablas
+--Creacion de las tablas
 USE Ejercicio_1;
 
 CREATE TABLE Almacen 
