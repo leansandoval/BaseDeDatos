@@ -50,7 +50,12 @@ USE Ejemplo123;
 -- base de datos, 1 esquema para desarrollo, 1 para testing y uno para producción.
 
 -- CREAR Esquema
+
+GO
+
 CREATE SCHEMA Desarrollo;
+
+GO
 
 -- BORRAR Esquema
 DROP SCHEMA Desarrollo;
@@ -62,41 +67,41 @@ DROP SCHEMA Desarrollo;
 -- Dentro de un motor de base de datos (SQL server 2017)
 
 -- ENTEROS --
-BIGINT			--> Entero 8 bytes
-INT				--> Entero 4 bytes
-SMALLINT		--> Entero 2 bytes
-TINYINT			--> Entero 1 byte
+-- BIGINT			Entero 8 bytes
+-- INT				Entero 4 bytes
+-- SMALLINT			Entero 2 bytes
+-- TINYINT			Entero 1 byte
 
 -- BOOLEANO --
-BIT				--> Entero 1 byte 1 / 0 / NULL
+-- BIT				Entero 1 byte 1 / 0 / NULL
 
 -- CON DECIMALES --
-NUMERIC (L, d)	--> L = Largo total (parte entera + decimal)
-				--> d = Cantidad de decimales 1.000.000,00 DECIMAL(9,2)
-DECIMAL	(L, d) 
+-- NUMERIC (L, d)	L = Largo total (parte entera + decimal)
+--					d = Cantidad de decimales 1.000.000,00 DECIMAL(9,2)
+-- DECIMAL	(L, d) 
 
-FLOAT , REAL
-SMALLMONEY		--> 4 Bytes. Representa numeros con simbolo de dinero. 
-MONEY			--> 8 bytes
+-- FLOAT , REAL
+-- SMALLMONEY		4 Bytes. Representa numeros con simbolo de dinero. 
+-- MONEY			8 bytes
 
 -- CADENAS DE TEXTO --
-CHAR (L)		--> Almacena la cantidad indicada en "L". si pongo Char(5) y guardo ANA, guarará 3 carateres para ANA y 2 más hasta llegar a 5
-VARCHAR (L)     --> Almacena la cadena ingresada y si es de largo menor a "L" guarda la cantidad de la cadena. 
-				--> Ejemplo: VARCHAR(5) "ANA" guarda ANA y 3. si guarda JUAN guarda la cadena y 4.
-VARCHAR(MAX)    --> MAXIMO PERMITIDO POR EL MOTOR 
+-- CHAR (L)			Almacena la cantidad indicada en "L". si pongo Char(5) y guardo ANA, guarará 3 carateres para ANA y 2 más hasta llegar a 5
+-- VARCHAR (L)		Almacena la cadena ingresada y si es de largo menor a "L" guarda la cantidad de la cadena. 
+--					Ejemplo: VARCHAR(5) "ANA" guarda ANA y 3. si guarda JUAN guarda la cadena y 4.
+-- VARCHAR(MAX)		MAXIMO PERMITIDO POR EL MOTOR 
 
 -- CADENAS DE TEXTO UNICODE --
-NCHAR (L)
-NVARCHAR (L)
+-- NCHAR (L)
+-- NVARCHAR (L)
 
 -- FECHAS & HORAS --
 --> Todos los datos de fecha se guardan como un número, numero que se toma como 0 un momento dado en el tiempo y luego en milisegundos a partir de ahí.
 
-DATE			--> El ANSI SQL (estándar) indica que el 0 es 1582, 10, 15, y llegaría hasta el 9999, 12, 31, según el tamaño en bytes del campo
-TIME			--> Horas
-DATETIME		--> Fecha y hora. Arrancando 1753, 1 de enero.
-SMALLDATETIME	--> Fecha y hora, pero el "0" es un valor más próximo que 1753, arrancando de 1900, 1, 1. 
-DATETIME2		--> Arranca en 1900, 1, 1 y almacena en 6 bytes el tamaño, para mayor precisión en los milisegundos
+-- DATE				El ANSI SQL (estándar) indica que el 0 es 1582, 10, 15, y llegaría hasta el 9999, 12, 31, según el tamaño en bytes del campo
+-- TIME				Horas
+-- DATETIME			Fecha y hora. Arrancando 1753, 1 de enero.
+-- SMALLDATETIME	Fecha y hora, pero el "0" es un valor más próximo que 1753, arrancando de 1900, 1, 1. 
+-- DATETIME2		Arranca en 1900, 1, 1 y almacena en 6 bytes el tamaño, para mayor precisión en los milisegundos
 
 -->> QUE VALOR TIENE, EN MILISEGUNDOS, LA FECHA DE INICIO DE LA CLASE DE HOY? 2022/10/30 08:35:00.0000
 
@@ -255,7 +260,7 @@ CREATE TABLE Localidad
 )
 
 -- COMO CONOCER LA ESTRUCTURA DE UNA TABLA?
-SP_HELP  Localidad
+-- SP_HELP  Localidad
 
 -- ERROR AL REFERENCIAR CON DISTINTO TIPO
 CREATE TABLE TablaFk_ERROR
@@ -304,9 +309,9 @@ CREATE TABLE R
 	FOREIGN KEY (c1) REFERENCES C(c1)
 );
 
-SP_HELP R
+-- SP_HELP R
 
--<<<<<---------- EJEMPLO TERNARIA 
+-- <<<<<---------- EJEMPLO TERNARIA 
 
 -- TRABAJANDO CON DATOS
 
@@ -316,7 +321,7 @@ SP_HELP R
 -- Hay varias formas de insertar datos en una base de datos, por fila o tupla o con muchas filas o tuplas
 
 -- INSERTAR 1 FILA
-sp_help TablaUno
+-- sp_help TablaUno
 
 INSERT INTO TablaUno (Campo1, Campo2) VALUES (1, 'A');				-- ORDEN RELATIVO AL CONJUNTO DE CAMPOS
 INSERT INTO TablaUno (Campo2, Campo1) VALUES ('A', 10);				-- ORDEN RELATIVO AL CONJUNTO DE CAMPOS
@@ -401,8 +406,8 @@ WHERE Campo2 LIKE 'mo_el'			-- << "_" UN CARACTER en medio de otros
 
 --- Unión: el operador unión "une" dos consultas en un único resultado
 
-SP_HELP TablaUno
-SP_HELP TablaDos
+-- SP_HELP TablaUno
+-- SP_HELP TablaDos
 
 SELECT * 
 FROM TablaUno
@@ -525,12 +530,12 @@ ORDER BY Campo2, Campo1 DESC -- ORDENAMOS Primero por el campo 2, luego por el c
 
 /************************************************** Funciones de agregado **************************************************/
 
-MIN			-- Toma el minimo de un conjunto
-SUM			-- Suma el conjunto
-COUNT		-- Cuenta los elementos de un conjunto. Es la UNICA que si no hay elementos en el conjunto no da NULL, da 0.
-MAX			-- Toma el maximo de un conjunto.
-AVG			-- Promedia el conjunto
-STRING_AGG	-- Acumula strings (concatena)
+-- MIN			Toma el minimo de un conjunto
+-- SUM			Suma el conjunto
+-- COUNT		Cuenta los elementos de un conjunto. Es la UNICA que si no hay elementos en el conjunto no da NULL, da 0.
+-- MAX			Toma el maximo de un conjunto.
+-- AVG			Promedia el conjunto
+-- STRING_AGG	Acumula strings (concatena)
 
 -- EJEMPLO CON TABLA VACIA
 CREATE TABLE EjemploFuncAgr (Campo1 INT);
@@ -723,13 +728,16 @@ HAVING COUNT (r.Materia) = (SELECT COUNT (*) FROM Materia)
 
 ---- Las vistas son una forma de guardar CODIGO de una consulta. No se almacena el resultado, SI la consulta y su TXT.
 
+GO
+
 CREATE VIEW Vista1 (Alumno)
 AS
-
 	SELECT a.Nombre
 	FROM Rinde r JOIN Alumno a ON r.Alumno = a.Legajo
 	GROUP BY a.Legajo, a.Nombre 
 	HAVING COUNT (r.Materia) = (SELECT COUNT (*) FROM Materia)
+
+GO
 
 ---
 SELECT * 
@@ -758,13 +766,11 @@ SELECT * FROM Vista1;
 
 -- EQUIVALENTE A
 SELECT * 
-FROM 
-(
-	SELECT a.Nombre
-	FROM Rinde r JOIN Alumno a ON r.Alumno = a.Legajo
-	GROUP BY a.Legajo, a.Nombre 
-	HAVING COUNT (r.Materia) = (SELECT COUNT (*) FROM Materia)
-) AS Vista1
+FROM (SELECT a.Nombre
+	  FROM Rinde r JOIN Alumno a ON r.Alumno = a.Legajo
+	  GROUP BY a.Legajo, a.Nombre 
+	  HAVING COUNT (r.Materia) = (SELECT COUNT (*) FROM Materia))
+	AS Vista1
 
 -- BORRADO
 DROP VIEW Vista1;
@@ -776,6 +782,8 @@ DROP VIEW Vista1;
 
 -- Devolviendo escalar.
 
+GO
+
 CREATE FUNCTION dbo.miFuncion (@Param INT)
 RETURNS INT
 AS
@@ -783,13 +791,18 @@ AS
 		RETURN @Param * 2
 	END;
 
-	-- NOTAS: SE CREA UNA FUNCION Que recibe un parametro entero, que además, retorna otro entero.
+GO
+
+	-- Notas: SE CREA UNA FUNCION Que recibe un parametro entero, que además, retorna otro entero.
 	-- Luego, con las palabras reservadas BEGIN/END generamos un grupo sin nombre de codigo
 
 -- Ejecución de prueba de la funcion
 SELECT dbo.miFuncion(2), dbo.miFuncion(3), dbo.miFuncion(20)
 
 -- Devolviendo tabla
+
+GO
+
 CREATE FUNCTION dbo.miFuncionTabla (@Param INT)
 RETURNS TABLE
 AS
@@ -798,7 +811,10 @@ AS
 			SELECT POWER(Campo1, @Param) AS Id, Campo2
 			FROM TablaUno
 		);
---NOTA: Como se ve, hacemos un RETURN en linea, no hace falta usar un BEGIN/END
+
+GO
+
+-- NOTA: Como se ve, hacemos un RETURN en linea, no hace falta usar un BEGIN/END
 
 -- Ejecución de prueba de la funcion
 SELECT * FROM dbo.miFuncionTabla(2);		
@@ -811,12 +827,16 @@ DROP FUNCTION dbo.miFuncionTabla;
 
 /******************************** Procedimientos Almacenados (Stored Procedure) ********************************/
 
--- Un Prodicimento es un conjunto de operaciones que se deben ejecutar de forma reiterativa. 
+-- Un Prodicimento es un conjunto de operaciones que se deben ejecutar de forma reiterativa.
+
+GO
 
 CREATE PROCEDURE Borra(@Legajo VARCHAR(2))
 AS
 	DELETE FROM Rinde WHERE Alumno = @Legajo;
 	DELETE FROM Alumno WHERE Legajo = @Legajo;
+
+GO
 
 -- Ejecutar procedimiento: 
 DELETE FROM Alumno WHERE legajo = 'A1'
@@ -869,6 +889,9 @@ DELETE FROM Cliente WHERE NroCli  = 7
 UPDATE Cliente set NomCli = '' WHERE NroCli = 6
 
 -- CREACION DEL TRIGGER
+
+GO
+
 CREATE TRIGGER trHistoricoClientes ON Cliente FOR UPDATE, DELETE
 AS
 	-- IMPORTANTE, LAS ESTRUCTURAS DEL DELETED E INSERTED 
@@ -886,7 +909,9 @@ AS
 		INSERT INTO ClienteHistorico  (NroCli, [NomCli], [CiudadCli], FechaCambio, Accion)
 		SELECT *, GETDATE(), 'DELETE'
 		FROM Deleted
-	
+
+GO
+
 -- PRUEBA DEL TRIGGER
 
 UPDATE Cliente

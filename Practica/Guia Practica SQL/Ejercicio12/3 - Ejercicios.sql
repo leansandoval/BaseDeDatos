@@ -1,75 +1,14 @@
-/* Ejercicio 12: Dado el siguiente esquema de relación:
+/* Ejercicio 12: Dado el siguiente esquema de relacion:
 	Producto (CodProd, Descripcion, CodProv, StockActual)
 	Stock (Nro, Fecha, CodProd, Cantidad)
 	Proveedor (CodProv, RazonSocial, FechaInicio)
-*/
 
-CREATE DATABASE Ejercicio12
-GO
-USE Ejercicio12;
-GO
+Realizar las siguientes tareas utilizando lenguaje SQL	*/
 
-CREATE TABLE Proveedor
-( 
-	CodProv INT PRIMARY KEY, 
-	RazonSocial VARCHAR(50), 
-	FechaInicio DATE, 
-) 
-   
-CREATE TABLE Producto
-( 
-	CodProd INT PRIMARY KEY, 
-	Descripcion VARCHAR(100), 
-	CodProv INT NOT NULL, 
-	StockActual INT, 
-	--CONSTRAINT FK_Producto_Prov FOREIGN KEY (CodProv) REFERENCES Proveedor(CodProv)
-)  
-
-CREATE TABLE Stock
-(   
-	Numero INT, 
-	Fecha DATE, 
-	CodProd INT, 
-	Cantidad INT NOT NULL,
-	CONSTRAINT PK_Stock PRIMARY KEY (Numero, Fecha, CodProd)
-    --CONSTRAINT FK_Stock_CodProd FOREIGN KEY (CodProd) REFERENCES Producto (CodProd),
-)
-
-ALTER TABLE Stock ADD CONSTRAINT FK_Stock_CodProd FOREIGN KEY (CodProd) REFERENCES Producto (CodProd) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE Producto ADD CONSTRAINT FK_Producto_CodProv FOREIGN KEY (CodProv) REFERENCES Proveedor(CodProv) ON DELETE CASCADE ON UPDATE CASCADE;
-
-INSERT INTO Proveedor (CodProv, RazonSocial, FechaInicio) VALUES
-(1,'Unlam','1990-03-05'),
-(2,'Coto','2005-07-01'),
-(3,'Carrefour','2010-04-11'); 
-
-INSERT INTO Producto (CodProd, Descripcion, CodProv, StockActual) VALUES
-(1,'Cafe de autor',2,100),
-(2,'Yogur griego',2,50),
-(3,'Cereales',2,400),
-(4,'Libro de Probabilidad y estadistica',1,130),
-(5,'Fundamentos de los Sistemas Circuitales',1,25),
-(6,'C/C++ de Deltei y Deltei',1,12),
-(7,'Arroz',3,200),
-(8,'Harina',3,800),
-(9,'Aceite',3,250),
-(10,'Teclado Gamer',3,0);
-
-INSERT INTO Stock (Numero, Fecha, CodProd, Cantidad) VALUES
-(1,'2020-12-30',1,37),
-(2,'2020-11-12',2,31),
-(3,'2021-01-15',2,15),
-(4,'2021-07-31',10,8),
-(5,GETDATE(),3,42),
-(6,GETDATE(),2,5),
-(7,'2021-07-31',9,1500),
-(8,GETDATE(),1,1340);
-
--- Realizar las siguientes tareas utilizando lenguaje SQL:
------------------------------------------------------------------------------------------------------------
 -- 1. p_EliminaSinstock(): Realizar un procedimiento que elimine los productos que no poseen stock.
 
--- Yop
+GO
+
 CREATE OR ALTER PROCEDURE p_EliminaSinstock AS
 BEGIN
 	DELETE FROM Producto WHERE CodProd IN (SELECT p.CodProd
@@ -78,13 +17,18 @@ BEGIN
 																   FROM Stock AS s))
 END
 
--- Otro wachin
+GO
+
+-- Otra resolucion
+
 CREATE PROCEDURE p_EliminaSinstockV2 AS
 BEGIN
 	DELETE FROM Producto WHERE CodProd IN (SELECT p.CodProd 
 											FROM Stock AS s RIGHT JOIN Producto AS p ON s.CodProd=p.CodProd 
-											WHERE ISNULL(s.Cantidad,0)=0)
+											WHERE ISNULL(s.Cantidad,0) = 0)
 END
+
+GO
 
 -- Prueba
 EXECUTE p_EliminaSinstock
@@ -94,15 +38,18 @@ EXECUTE p_EliminaSinstock
 -----------------------------------------------------------------------------------------------------------
 /* 2. p_ActualizaStock(): Para los casos que se presenten inconvenientes en los datos, se necesita realizar 
 un procedimiento que permita actualizar todos los Stock_Actual de los productos, tomando los datos de la
-entidad Stock. Para ello, se utilizará como stock válido la última fecha en la cual se haya cargado el 
+entidad Stock. Para ello, se utilizara como stock valido la ultima fecha en la cual se haya cargado el 
 stock.*/
 
-CREATE OR ALTER VIEW v_Productos_Ultima_Fecha_Stock AS
-(
+GO
+
+CREATE OR ALTER VIEW v_Productos_Ultima_Fecha_Stock AS (
 	SELECT s.CodProd, MAX(s.Fecha) AS 'Ultima Fecha'
 	FROM Stock AS s
 	GROUP BY s.CodProd
 )
+
+GO
 
 CREATE OR ALTER PROCEDURE p_ActualizaStock AS
 BEGIN
@@ -122,9 +69,14 @@ BEGIN
 	END
 END
 
+GO
+
 EXECUTE p_ActualizaStock
 
 -- Otro wachin
+
+GO
+
 CREATE OR ALTER PROCEDURE p_ActualizarStockV2 AS 
 BEGIN
 	DECLARE @IdProducto int, @Stock int  
@@ -142,9 +94,14 @@ BEGIN
 	END
 END
 
+GO
+
 -----------------------------------------------------------------------------------------------------------
 -- 3. p_DepuraProveedor(): Realizar un procedimiento que permita depurar todos los proveedores de los 
--- cuales no se posea stock de ningún producto provisto desde hace más de 1 año.
+-- cuales no se posea stock de ningun producto provisto desde hace mas de 1 anio.
+
+GO
+
 CREATE OR ALTER PROCEDURE p_DepurarProveedor AS 
 BEGIN
 	DELETE Proveedor
@@ -154,15 +111,19 @@ BEGIN
 					  WHERE s.Fecha < DATEADD(YY,-1,GETDATE()))
 END
 
+GO
+
 EXECUTE p_DepurarProveedor
 
 -----------------------------------------------------------------------------------------------------------
 /* 4. p_InsertStock(nro,fecha,prod,cantidad): Realizar un procedimiento que permita agregar stocks de 
-productos. Al realizar la inserción se deberá validar que:
+productos. Al realizar la insercion se debera validar que:
 
 a. El producto debe ser un producto existente
-b. La cantidad de stock del producto debe ser cualquier número entero mayor a cero.
-c. El número de stock será un valor correlativo que se irá agregando por cada nuevo stock de producto.*/
+b. La cantidad de stock del producto debe ser cualquier numero entero mayor a cero.
+c. El numero de stock sera un valor correlativo que se ira agregando por cada nuevo stock de producto.*/
+
+GO
 
 CREATE OR ALTER PROCEDURE p_InsertartStock (@nro INT OUTPUT, @fecha DATE, @codProd INT, @cantidad INT) AS
 BEGIN
@@ -182,13 +143,15 @@ BEGIN
 			 SET @cantidad = @cantidad + ISNULL((SELECT SUM(s.Cantidad) 
 												 FROM Stock AS s 
 												 WHERE s.CodProd = @codProd),0) --item c)
-			 -- En esta linea se le suma lo que anteriomente tenia en Stock, lo mismo seria en C como cantidad+=nuevaCantidad
+			 -- En esta linea se le suma lo que anteriomente tenia en Stock, lo mismo seria en C como cantidad += nuevaCantidad
 			 -- En el caso de que ese producto sea la primera vez que se encuentra en Stock (NULL) se le deberea sumar 0 ya que no habia nada anteriormente
 			 -- Para este ultimo caso seria igual a cantidad = nuevaCantidad + 0
 			 INSERT INTO Stock VALUES(@nro, @fecha, @codProd, @cantidad)
 		END
 	END
 END
+
+GO
 
 -- Prueba
 DECLARE @nro INT
@@ -200,9 +163,11 @@ EXECUTE p_InsertartStock @nro, @fecha, @codProd, @cantidad
 SELECT *
 FROM Stock AS s
 
-/* 5. tg_CrearStock: Realizar un trigger que permita automáticamente agregar un registro en la entidad 
-Stock, cada vez que se inserte un nuevo producto. El stock inicial a tomar, será el valor del campo 
+/* 5. tg_CrearStock: Realizar un trigger que permita automaticamente agregar un registro en la entidad 
+Stock, cada vez que se inserte un nuevo producto. El stock inicial a tomar, sera el valor del campo 
 StockActual.*/
+
+GO
 
 CREATE OR ALTER TRIGGER tg_CrearStock ON Producto AFTER INSERT AS
 BEGIN
@@ -212,11 +177,15 @@ BEGIN
 	INSERT INTO Stock VALUES (@NumeroStock, GETDATE(), @CodProd, @Cantidad)
 END
 
+GO
+
 INSERT INTO Producto (CodProd, Descripcion, CodProv, StockActual) VALUES (11,'Monitor Curvo',3,40)
 
 /* 6. p_ListaSinStock(): Crear un procedimiento que permita listar los productos que no posean stock en 
-este momento y que no haya ingresado ninguno en este último mes. De estos productos, listar el código 
-y nombre del producto, razón social del proveedor y stock que se tenía al mes anterior.*/
+este momento y que no haya ingresado ninguno en este ultimo mes. De estos productos, listar el codigo 
+y nombre del producto, razon social del proveedor y stock que se tenia al mes anterior.*/
+
+GO
 
 CREATE PROCEDURE p_ListaSinStock AS
 BEGIN
@@ -236,6 +205,8 @@ BEGIN
 						  )
 END
 
+GO
+
 EXECUTE p_ListaSinStock
 
 /* 7. p_ListaStock(): Realizar un procedimiento que permita generar el siguiente reporte:
@@ -246,46 +217,57 @@ EXECUTE p_ListaSinStock
 							04/08/2009		50			20			40
 							.....			.....		.....		.....
 
-En este listado se observa que se contará la cantidad de productos que posean a una determinada fecha 
-más de 1000 unidades, menos de 1000 unidades o que no existan unidades de ese producto.
-Según el ejemplo, el 01/08/2009 existen 100 productos que poseen más de 1000 unidades, en cambio el 
-03/08/2009 sólo hubo 53 productos con más de 1000 unidades.*/
+En este listado se observa que se contara la cantidad de productos que posean a una determinada fecha 
+mas de 1000 unidades, menos de 1000 unidades o que no existan unidades de ese producto.
+Segun el ejemplo, el 01/08/2009 existen 100 productos que poseen mas de 1000 unidades, en cambio el 
+03/08/2009 solo hubo 53 productos con mas de 1000 unidades.*/
+
+GO
 
 -- Productos con mas de 1000 unidades
-CREATE OR ALTER VIEW v_Productos_por_fecha_mayor_a_1000 AS
-(
+CREATE OR ALTER VIEW v_Productos_por_fecha_mayor_a_1000 AS (
 	SELECT s.Fecha, s.CodProd, SUM(s.Cantidad) 'Cantidad'
 	FROM Stock AS s INNER JOIN Producto AS p ON s.CodProd = p.CodProd
 	GROUP BY s.Fecha, s.CodProd
 	HAVING SUM(s.Cantidad) > 1000
 )
 
-CREATE OR ALTER VIEW v_aux_mayor_mil AS
-(
+GO
+
+CREATE OR ALTER VIEW v_aux_mayor_mil AS (
 	SELECT cpf.Fecha, COUNT(*) 'Cantidad de productos con mas de mil unidades'
 	FROM v_Productos_por_fecha_mayor_a_1000 AS cpf
 	GROUP BY cpf.Fecha
 )
 
+GO
+
 -- Productos con menos de 1000 unidades
-CREATE OR ALTER VIEW v_Productos_por_fecha_menor_a_1000 AS
-(
+
+GO
+
+CREATE OR ALTER VIEW v_Productos_por_fecha_menor_a_1000 AS (
 	SELECT s.Fecha, s.CodProd, SUM(s.Cantidad) 'Cantidad'
 	FROM Stock AS s INNER JOIN Producto AS p ON s.CodProd = p.CodProd
 	GROUP BY s.Fecha, s.CodProd
 	HAVING SUM(s.Cantidad) < 1000
 )
 
-CREATE OR ALTER VIEW v_aux_menor_mil AS
-(
+GO
+
+CREATE OR ALTER VIEW v_aux_menor_mil AS (
 	SELECT cpf.Fecha, COUNT(*) 'Cantidad de productos con menos de mil unidades'
 	FROM v_Productos_por_fecha_menor_a_1000 AS cpf
 	GROUP BY cpf.Fecha
 )
 
+GO
+
 -- Productos sin unidades
-CREATE OR ALTER VIEW v_Productos_sin_cantidad_por_fecha AS
-(
+
+GO
+
+CREATE OR ALTER VIEW v_Productos_sin_cantidad_por_fecha AS (
 	SELECT s.Fecha, p.CodProd
 	FROM Stock AS s CROSS JOIN Producto AS p
 	EXCEPT
@@ -293,12 +275,15 @@ CREATE OR ALTER VIEW v_Productos_sin_cantidad_por_fecha AS
 	FROM Stock AS s
 )
 
-CREATE OR ALTER VIEW v_aux_ceros AS
-(
+GO
+
+CREATE OR ALTER VIEW v_aux_ceros AS (
 	SELECT pscpf.Fecha, COUNT(*) 'Cantidad de productos sin unidades'
 	FROM v_Productos_sin_cantidad_por_fecha AS pscpf
 	GROUP BY pscpf.Fecha
 )
+
+GO
 
 -- Respuesta
 SELECT DISTINCT s.Fecha, ISNULL(amay.[Cantidad de productos con mas de mil unidades],0) '> 1000',
@@ -309,10 +294,12 @@ FROM Stock AS s LEFT JOIN v_aux_mayor_mil AS amay ON s.Fecha = amay.Fecha
 				LEFT JOIN v_aux_ceros AS acer ON s.Fecha = acer.Fecha
 
 /* 8. El siguiente requerimiento consiste en actualizar el campo StockActual de la entidad Producto, cada 
-vez que se altere una cantidad (positiva o negativa) de ese producto. El stock actual reflejará el stock 
-que exista del producto, sabiendo que en la entidad Stock se almacenará la cantidad que ingrese o egrese. 
-Además, se debe impedir que el campo “StockActual” pueda ser actualizado manualmente. Si esto sucede, 
-se deberá dar marcha atrás a la operación indicando que no está permitido.*/
+vez que se altere una cantidad (positiva o negativa) de ese producto. El stock actual reflejara el stock 
+que exista del producto, sabiendo que en la entidad Stock se almacenara la cantidad que ingrese o egrese. 
+Ademas, se debe impedir que el campo [StockActual] pueda ser actualizado manualmente. Si esto sucede, 
+se debera dar marcha atras a la operacion indicando que no esta permitido.*/
+
+GO
 
 CREATE OR ALTER TRIGGER tg_Actualizar_StockActual ON Stock AFTER INSERT AS
 BEGIN
@@ -322,7 +309,11 @@ BEGIN
 		UPDATE Producto SET StockActual = (@CantidadVieja - @CantidadNueva) WHERE CodProd IN (SELECT d.CodProd FROM Inserted AS d)
 END
 
+GO
+
 INSERT INTO Stock (Numero, Fecha, CodProd, Cantidad) VALUES (10,GETDATE(),1,15)
+
+GO
 
 CREATE OR ALTER TRIGGER tg_Impedir_Actualizar_StockActual ON Producto AFTER UPDATE AS
 BEGIN
@@ -335,5 +326,7 @@ BEGIN
 		RAISERROR ('No es posible actualizar manualmente el stock actual',11,1);
 	END
 END
+
+GO
 
 UPDATE Producto SET StockActual = 100 WHERE CodProd = 2

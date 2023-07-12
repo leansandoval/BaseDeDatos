@@ -417,11 +417,14 @@ WHERE NOT EXISTS (SELECT *
 /* Las vistas ocupan espacio en la Base de Datos? No, las vistas no ocupan espacio porque no contienen 
 datos (solo ocupan un espacio MINIMO correspondiente al texto de la consulta)*/
 
-CREATE VIEW Vista1 AS
-(
+GO
+
+CREATE VIEW Vista1 AS (
 	SELECT e.Legajo, e.Apellido, d.Descripcion AS Departamento
 	FROM Departamento AS d INNER JOIN Empleado AS e ON e.CodDepto = d.CodDepto
 )
+
+GO
 
 SELECT *
 FROM Vista1 AS v1
@@ -430,47 +433,63 @@ WHERE v1.Departamento = 'Sistemas'
 DROP VIEW Vista1
 
 -- Renombrar el nombre de los campos (parecido al AS)
-CREATE VIEW Vista2 (Departamento, CantidadDeEmpleados) AS 
-(
+
+GO
+
+CREATE VIEW Vista2 (Departamento, CantidadDeEmpleados) AS (
 	SELECT d.Descripcion, COUNT(*)
 	FROM Departamento AS d INNER JOIN Empleado AS e ON e.CodDepto = d.CodDepto
 	GROUP BY d.Descripcion
 )
+
+GO
 
 SELECT *
 FROM Vista2 AS v2
 WHERE v2.CantidadDeEmpleados > 1
 
 --Renombrar el nombre de los campos (parecido al AS)
-CREATE VIEW Vista3 (Departamento, CantidadDeEmpleados) AS		
-(
+
+GO
+
+CREATE VIEW Vista3 (Departamento, CantidadDeEmpleados) AS (
 	SELECT d.Descripcion, COUNT(*)
 	FROM Departamento AS d INNER JOIN Empleado AS e ON e.CodDepto = d.CodDepto
 	GROUP BY d.Descripcion
 	--ORDER BY 2	-- No se puede poner un ORDER BY dentro de la vista
 )
 
+GO
+
 SELECT *
 FROM Vista3
 ORDER BY 2
 
 --No se pueden nombrar vistas con el nombre de una tabla/vista
-CREATE VIEW Departamento AS
-(
+
+GO
+
+CREATE VIEW Departamento AS (
 	SELECT *
 	FROM Empleado
 )
+
+GO
 
 --Borrar
 DROP VIEW Vista3
 
 -- Crear vista de vista
-CREATE VIEW Vista4 AS
-(
+
+GO
+
+CREATE VIEW Vista4 AS (
 	SELECT *
 	FROM Vista2
 	WHERE CantidadDeEmpleados = 2
 )
+
+GO
 
 -- Borrar la vista que estaba dentro de la vista, no se puede ejecutar. La vista queda 'rota'
 DROP VIEW Vista2
@@ -479,13 +498,16 @@ DROP VIEW Vista2
 --Caso 1: Vista NO actualizable. No es posible ya que la vista es muy compleja
 
 -- Renombrar el nombre de los campos (parecido al AS)
-CREATE VIEW Vista2 (Departamento, CantidadDeEmpleados) AS
-			
-(
+
+GO
+
+CREATE VIEW Vista2 (Departamento, CantidadDeEmpleados) AS (
 	SELECT d.Descripcion, COUNT(*)
 	FROM Departamento AS d INNER JOIN Empleado AS e ON e.CodDepto = d.CodDepto
 	GROUP BY d.Descripcion
 )
+
+GO
 
 --Ejemplo: actualizar Ventas a Comercial
 UPDATE	Vista2
@@ -493,12 +515,16 @@ SET Departamento = 'Comercial'
 WHERE Departamento = 'Ventas'
 
 --Caso 2: Vista actualizable (cambia los datos en la tabla)
-CREATE VIEW EmpA AS
-(
+
+GO
+
+CREATE VIEW EmpA AS (
 	SELECT *
 	FROM Empleado AS e
 	WHERE e.Categoria = 'A'
 )
+
+GO
 
 UPDATE EmpA
 SET Telefono = '111-2222'

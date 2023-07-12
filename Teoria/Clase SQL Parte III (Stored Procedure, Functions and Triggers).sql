@@ -30,10 +30,10 @@ print @nro
 	FROM Person.Person
 	WHERE EXISTS (SELECT 1 FROM PruebaIN WHERE Title=Campo1)	-- Lista dinamica
 
-	--CREATE TABLE PruebaIN (Campo1 varchar(10))
-	--INSERT INTO PruebaIN VALUES ('Ms.'),('Mr.');
+	-- CREATE TABLE PruebaIN (Campo1 varchar(10))
+	-- INSERT INTO PruebaIN VALUES ('Ms.'),('Mr.');
 
-	sp_updatestats
+	-- sp_updatestats
 
 	DBCC DROPCLEANBUFFERS
 	DBCC FREEPROCCACHE
@@ -42,18 +42,28 @@ print @nro
 -- Procedimiento almacenado: es un proceso que se ejecuta en la bdd para realizar alguna accion que querramos.
 
 -- Create
+
+GO
+
 CREATE PROCEDURE P_CANT_ADDRES
 AS
 	SELECT *
 	FROM Person.Person
 
+GO
+
 -- Alterar
+
+GO
+
 ALTER PROCEDURE P_CANT_ADDRES
 AS
 	DECLARE @CANT INT
 	SET @CANT=(SELECT COUNT(*) 
 				FROM Person.Address)
 	SELECT @CANT AS CANT_ADDRESS
+
+GO
 
 -- Ejecucion
 EXECUTE P_CANT_ADDRES
@@ -63,15 +73,21 @@ EXECUTE P_CANT_ADDRES
 -- SP con parametros
 -- OUTPUT --> Es necesario declararlo para variables que se reciben como parametros pero no fijos.
 
+GO
+
 CREATE PROCEDURE P_CANT_ADDRESS_PARAMETROS (@CANTOUTPUT INT OUTPUT)
 AS
 	SET @CANTOUTPUT=(SELECT COUNT(*) 
 					FROM Person.Address)
 
+GO
+
 ALTER PROCEDURE P_CANT_ADDRESS_PARAMETROS (@RAZONSOCIAL VARCHAR(100), @CANTOUTPUT INT OUTPUT)
 AS
 	SET @CANTOUTPUT=(SELECT COUNT(*) 
 					FROM Person.Address)
+
+GO
 
 -- Ejecucion
 
@@ -101,6 +117,9 @@ PRINT 'RAZON SOCIAL 1 = '+@RZ
 -- Scalar Functions
 
 -- Ejemplo (Funcion sacada de la base de datos AdventureWorks2019)
+
+GO
+
 CREATE FUNCTION [dbo].[ufnGetStock](@ProductID [int])
 RETURNS [int] 
 AS 
@@ -115,6 +134,8 @@ BEGIN
     RETURN @ret
 END;
 
+GO
+
 -- La funcion devuelve un entero
 SELECT dbo.ufnGetStock (1) AS VALOR, 'RESULTADO FUNCION' AS RESULTADO
 
@@ -127,6 +148,9 @@ SELECT dbo.ufnGetStock (1) AS VALOR, 'RESULTADO FUNCION' AS RESULTADO
 -- Table functions
 
 -- Ejemplo (Trigger sacado de la base de datos AdventureWorks2019)
+
+GO
+
 CREATE FUNCTION [dbo].[ufnGetContactInformation](@PersonID int)
 RETURNS @retContactInformation TABLE 
 (
@@ -196,6 +220,8 @@ BEGIN
 	RETURN;
 END;
 
+GO
+
 -- Invocacion:
 SELECT *
 FROM dbo.ufnGetContactInformation (1)
@@ -213,6 +239,8 @@ FROM @x
 
 --=================================================================================================================
 
+GO
+
 CREATE FUNCTION dbo.f_test()
 RETURNS int
 AS
@@ -221,6 +249,8 @@ BEGIN
 	set @valor=(SELECT COUNT(*) FROM Person.Address)
 	return @valor
 END
+
+GO
 
 SELECT dbo.f_test ()
 
@@ -255,26 +285,30 @@ DROP TABLE TABLAPRUEBA
 
 --=================================================================================================================
 
-CREATE TRIGGER tg_prueba ON TABLAPRUEBA
-AFTER INSERT
+GO
+
+CREATE TRIGGER tg_prueba ON TABLAPRUEBA AFTER INSERT
 AS
 	UPDATE TABLAPRUEBA SET fecha=GETDATE()
+
+GO
 
 INSERT INTO TABLAPRUEBA VALUES (2,'C',NULL)
 -- Cuando se inserto actualizo en todas las filas del campo fecha (solo queria que cambia en la fila que inserte)
 
 --=================================================================================================================
 
-ALTER TRIGGER tg_prueba ON TABLAPRUEBA
-AFTER INSERT
+GO
+
+ALTER TRIGGER tg_prueba ON TABLAPRUEBA AFTER INSERT
 AS
 	UPDATE TABLAPRUEBA SET fecha=GETDATE()
 	WHERE campo1 IN (SELECT campo1 FROM inserted)	-- Faltaba esta linea
 
-INSERT INTO TABLAPRUEBA VALUES (3,'C',NULL)
+GO
 
+INSERT INTO TABLAPRUEBA VALUES (3,'C',NULL)
 SELECT * FROM TABLAPRUEBA
--- Todo bien ;)
 
 -- Si el INSERT no fue exitoso no se ejecuta el trigger
 
@@ -290,14 +324,16 @@ DELETE FROM ALUMNO WHERE CIUDAD='Gonzalez Catan'
 
 --=================================================================================================================
 
-CREATE TRIGGER tg_prueba2 ON TABLAPRUEBA
-INSTEAD OF INSERT
+GO
+
+CREATE TRIGGER tg_prueba2 ON TABLAPRUEBA INSTEAD OF INSERT
 AS
 	UPDATE TABLAPRUEBA SET fecha=GETDATE()
 	WHERE campo1 IN (SELECT campo1 FROM inserted)
 
-INSERT INTO TABLAPRUEBA VALUES (3,'C',NULL)
+GO
 
+INSERT INTO TABLAPRUEBA VALUES (3,'C',NULL)
 SELECT * FROM TABLAPRUEBA
 
 -- No se inserto el valor porque en ningun lado dentro del trigger hice el insert. Lo que sucede es que el insted of reemplaza
@@ -305,15 +341,19 @@ SELECT * FROM TABLAPRUEBA
 
 --=================================================================================================================
 
+GO
+
 CREATE TRIGGER tg_prueba3 ON TABLAPRUEBA
 INSTEAD OF DELETE
 AS
 	DECLARE @I INT
 	SET @I=0
 
+GO
+
 -- En lugar de hacer un DELETE se ejecuta el trigger
 
 DELETE FROM TABLAPRUEBA
-
 SELECT * FROM TABLAPRUEBA
--- No se borra la tabla :O, en lugar de eso asigna un valor a una variable
+
+-- No se borra la tabla, en lugar de eso asigna un valor a una variable
