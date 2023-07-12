@@ -1,12 +1,12 @@
 /* Ejercicio 9: Dada la siguiente base de datos
-	Persona (TipoDoc, NroDoc, Nombre, Dirección, FechaNac, Sexo)
+	Persona (TipoDoc, NroDoc, Nombre, Direccion, FechaNac, Sexo)
 	Progenitor (TipoDoc, NroDoc, TipoDocHijo, NroDocHijo)*/
 
 USE Ejercicio_9
 GO
 
-/*1. Hallar para una persona dada, por ejemplo José Pérez, los tipos y números de documentos, nombres, 
-dirección y fecha de nacimiento de todos sus hijos.*/
+/*1. Hallar para una persona dada, por ejemplo Jose Perez, los tipos y numeros de documentos, nombres, 
+direccion y fecha de nacimiento de todos sus hijos.*/
 
 DECLARE @Persona VARCHAR(30)
 SET @Persona = 'Jose Perez'
@@ -19,7 +19,7 @@ FROM Persona AS per JOIN (SELECT pro.TipoDocHijo, pro.NroDocHijo
 						  WHERE per.Nombre = @Persona) AS hijos 
 ON per.TipoDoc = hijos.TipoDocHijo AND per.NroDoc = hijos.NroDocHijo
 
-/* 2. Hallar para cada persona los tipos y números de documento, nombre, domicilio y fecha de nacimiento de:
+/* 2. Hallar para cada persona los tipos y numeros de documento, nombre, domicilio y fecha de nacimiento de:
 a. Todos sus hermanos, incluyendo medios hermanos.
 b. Su madre
 c. Su abuelo materno
@@ -34,15 +34,18 @@ FROM Persona AS per JOIN (SELECT DISTINCT pro1.TipoDocHijo, pro1.NroDocHijo, pro
 						  ON pro1.TipoDoc = pro2.TipoDoc AND pro2.NroDoc = pro1.NroDoc) AS herm
 ON per.TipoDoc = herm.[TipoDoc Hermano] AND per.NroDoc = herm.[NroDoc Hermano]
 
--- 2.b
+-- 2.b Su abuelo materno
 
-CREATE OR ALTER VIEW vMadresDePersonas AS
-(
+GO
+
+CREATE OR ALTER VIEW vMadresDePersonas AS (
 	SELECT pro.TipoDocHijo [TipoDoc], pro.NroDocHijo [NroDoc], 
 		   per.TipoDoc [TipoDoc Madre], per.NroDoc [NroDoc Madre], per.Nombre [Nombre Madre], per.Direccion [Direccion Madre], per.FechaNac [FechaNac Madre]
 	FROM Progenitor AS pro JOIN Persona AS per ON pro.TipoDoc = per.TipoDoc AND pro.NroDoc = per.NroDoc
 	WHERE per.Sexo = 'Femenino'
 )
+
+GO
 
 SELECT *
 FROM vMadresDePersonas
