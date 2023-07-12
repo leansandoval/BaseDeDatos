@@ -64,12 +64,15 @@ GROUP BY p.IdProducto
 
 -- 6. Indique quien es el vendedor con mas ventas realizadas.
 
-CREATE OR ALTER VIEW vCantidadDeVentasPorVendedor AS
-(
+GO
+
+CREATE OR ALTER VIEW vCantidadDeVentasPorVendedor AS (
 	SELECT v.IdVendedor, COUNT(v.NroFactura) AS [Cantidad de ventas]
 	FROM Venta AS v
 	GROUP BY v.IdVendedor
 )
+
+GO
 
 SELECT v.IdVendedor
 FROM vCantidadDeVentasPorVendedor AS v
@@ -85,7 +88,7 @@ HAVING COUNT(v.NroFactura) >= ALL (SELECT COUNT(v.NroFactura)
 								   FROM Venta AS v
 								   GROUP BY v.IdVendedor)
 
--- 7. Indique todos los productos de lo que se hayan vendido más de 20 unidades. 
+-- 7. Indique todos los productos de lo que se hayan vendido mas de 20 unidades. 
 
 SELECT dv.IdProducto
 FROM DetalleVenta AS dv
@@ -126,7 +129,9 @@ GROUP BY vta.IdCliente
 HAVING COUNT(DISTINCT vta.IdVendedor) = (SELECT COUNT(*) [Cantidad de vendedores]
 										 FROM Vendedor AS v)
 
--- 9. Genere un SP que permita crear un nuevo vendedor, pasando los parámetros del mismo.
+-- 9. Genere un SP que permita crear un nuevo vendedor, pasando los parametros del mismo.
+
+GO
 
 CREATE OR ALTER PROCEDURE pCrearVendedor (@Nombre VARCHAR(50), @Apellido VARCHAR(50), @DNI BIGINT) AS
 	IF EXISTS (SELECT 1 FROM Vendedor AS v WHERE v.DNI = @DNI)
@@ -137,9 +142,13 @@ CREATE OR ALTER PROCEDURE pCrearVendedor (@Nombre VARCHAR(50), @Apellido VARCHAR
 		INSERT INTO Vendedor (IdVendedor, Nombre, Apellido, DNI) VALUES (@NuevoId, @Nombre, @Apellido, @DNI)
 	END
 
+GO
+
 EXECUTE pCrearVendedor 'Cosme', 'Fulanito', 32204151
 
 -- Otra forma:
+
+GO
 
 CREATE OR ALTER PROCEDURE p_Nuevo_Vendedor (@IdVendedor INT OUTPUT, @Nombre VARCHAR(50), @Apellido VARCHAR(50), @DNI BIGINT)
 AS
@@ -151,8 +160,11 @@ BEGIN
 	INSERT INTO Vendedor (IdVendedor, Nombre, Apellido, DNI) VALUES (@IdVendedor, @Nombre, @Apellido, @DNI)
 END
 
+GO
 
--- 10. Genere una función que reciba por parametro un nro de factura y nos retorne el monto total de venta.
+-- 10. Genere una funcion que reciba por parametro un nro de factura y nos retorne el monto total de venta.
+
+GO
 
 CREATE OR ALTER FUNCTION fMontoTotalVenta (@NroFactura BIGINT) RETURNS INT AS
 BEGIN
@@ -164,6 +176,8 @@ BEGIN
 							GROUP BY dv.NroFactura, dv.PrecioUnitario)
 	RETURN @MontoTotal;
 END
+
+GO
 
 SELECT dbo.fMontoTotalVenta(1) AS [Monto total]
 
@@ -180,6 +194,8 @@ SELECT * INTO HistoricoDetalleVentas FROM DetalleVenta
 TRUNCATE TABLE HistoricoVentas
 TRUNCATE TABLE HistoricoDetalleVentas
 
+GO
+
 CREATE OR ALTER TRIGGER tEliminarVenta ON Venta INSTEAD OF DELETE AS
 BEGIN
 	INSERT INTO HistoricoVentas SELECT * FROM Deleted;
@@ -187,6 +203,8 @@ BEGIN
 	DELETE FROM DetalleVenta WHERE NroFactura IN (SELECT d.NroFactura FROM Deleted AS d) 
 	DELETE FROM Venta WHERE NroFactura IN (SELECT d.NroFactura FROM Deleted AS d)
 END
+
+GO
 
 -- Prueba
 

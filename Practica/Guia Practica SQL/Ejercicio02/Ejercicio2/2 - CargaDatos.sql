@@ -1,4 +1,4 @@
-USE [EJERCICIO_2]
+USE [Ejercicio_2]
 GO
 
 --Proveedor

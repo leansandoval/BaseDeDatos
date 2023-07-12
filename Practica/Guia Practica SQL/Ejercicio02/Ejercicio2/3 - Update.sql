@@ -19,8 +19,8 @@ DECLARE @counter SMALLINT;
 SET @counter = 1;  
 WHILE @counter < 7 
    BEGIN  
-		UPDATE [dbo].[Proveedor] SET [Categoria] = @counter WHERE [NroProv] = @counter
-		SET @counter = @counter + 1
+	UPDATE [dbo].[Proveedor] SET [Categoria] = @counter WHERE [NroProv] = @counter
+	SET @counter = @counter + 1
    END;  
 GO  
 
@@ -36,8 +36,8 @@ UPDATE [dbo].[Cliente] SET [NomCli] = 'Cli30' WHERE [NroCli] = 2
 UPDATE [dbo].[Articulo] SET [CiudadArt] = 'La Plata' WHERE  [NroArt] IN(5,6)
 
 --7
-UPDATE [dbo].[Cliente] SET [CiudadCli] = 'Junín' WHERE [NroCli] = 3
-UPDATE [dbo].[Cliente] SET [CiudadCli] = 'Junín' WHERE [NroCli] = 4
+UPDATE [dbo].[Cliente] SET [CiudadCli] = 'Junï¿½n' WHERE [NroCli] = 3
+UPDATE [dbo].[Cliente] SET [CiudadCli] = 'Junï¿½n' WHERE [NroCli] = 4
 
 -- 8.1
 UPDATE [dbo].[Articulo] SET [Descripcion] = 'Cuaderno' WHERE [NroArt] = 2

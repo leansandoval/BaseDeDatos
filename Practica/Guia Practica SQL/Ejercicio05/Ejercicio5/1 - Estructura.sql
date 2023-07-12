@@ -10,14 +10,11 @@ GO
 USE Ejercicio_5
 
 /*
-Película (CodPel, Título, Duración, Año, CodRubro)
-Rubro    (CodRubro, NombRubro)
-
-Ejemplar (CodEj, CodPel, Estado, Ubicación) 
-          Estado: Libre, Ocupado
-Cliente  (CodCli, Nombre, Apellido, Direccion, Tel, Email)
-Préstamo (CodPrest, CodEj, CodPel, CodCli, FechaPrest, FechaDev)
-
+	Pelicula (CodPel, Titulo, Duracion, Anio, CodRubro)
+	Rubro    (CodRubro, NombRubro)
+	Ejemplar (CodEj, CodPel, Estado, Ubicacion) 					Estado: Libre, Ocupado
+	Cliente  (CodCli, Nombre, Apellido, Direccion, Tel, Email)
+	Prestamo (CodPrest, CodEj, CodPel, CodCli, FechaPrest, FechaDev)
 */
 
 CREATE TABLE Rubro
@@ -41,7 +38,7 @@ CREATE TABLE Ejemplar
 	CodEj INT NOT NULL,
 	CodPel INT NOT NULL,
 	Estado BIT NOT NULL,
-	Ubicación VARCHAR(10)
+	Ubicacion VARCHAR(10)
 )
 
 ALTER TABLE Ejemplar ADD CONSTRAINT PK_CodEjPel PRIMARY KEY (CodEj, CodPel);

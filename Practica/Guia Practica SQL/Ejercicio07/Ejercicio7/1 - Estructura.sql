@@ -40,12 +40,12 @@ CREATE TABLE Cliente
 CREATE TABLE Viaje
 (
 	FechaHoraInicio DATETIME NOT NULL,
-	FechaHoraFin DATETIME  NOT NULL,
+	FechaHoraFin DATETIME NOT NULL,
 	Chofer INT NULL,
 	Cliente INT NULL,
 	Auto VARCHAR(10),
 	KmTotales DECIMAL(18,2),
-	EsperaTotal DECIMAL(18,2), 
+	EsperaTotal DECIMAL(18,2),
 	CostoEspera DECIMAL(18,2),
 	CostoKms DECIMAL(18,2)
 );

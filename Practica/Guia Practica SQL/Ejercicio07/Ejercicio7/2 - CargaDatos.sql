@@ -1,13 +1,13 @@
 USE  [Ejercicio_7]
 GO
 
-INSERT INTO [dbo].[Auto] (Matrícula, Modelo, Anio) VALUES ('AAA001','M1',2000)
-INSERT INTO [dbo].[Auto] (Matrícula, Modelo, Anio) VALUES ('AAA002','M2',2001)
-INSERT INTO [dbo].[Auto] (Matrícula, Modelo, Anio) VALUES ('AAA003','M3',2002)
-INSERT INTO [dbo].[Auto] (Matrícula, Modelo, Anio) VALUES ('AAA004','M4',2003)
-INSERT INTO [dbo].[Auto] (Matrícula, Modelo, Anio) VALUES ('AAA005','M5',2004)
-INSERT INTO [dbo].[Auto] (Matrícula, Modelo, Anio) VALUES ('AAA006','M6',2005)
-INSERT INTO [dbo].[Auto] (Matrícula, Modelo, Anio) VALUES ('AAA007','M7',2006)
+INSERT INTO [dbo].[Auto] (Matricula, Modelo, Anio) VALUES ('AAA001','M1',2000)
+INSERT INTO [dbo].[Auto] (Matricula, Modelo, Anio) VALUES ('AAA002','M2',2001)
+INSERT INTO [dbo].[Auto] (Matricula, Modelo, Anio) VALUES ('AAA003','M3',2002)
+INSERT INTO [dbo].[Auto] (Matricula, Modelo, Anio) VALUES ('AAA004','M4',2003)
+INSERT INTO [dbo].[Auto] (Matricula, Modelo, Anio) VALUES ('AAA005','M5',2004)
+INSERT INTO [dbo].[Auto] (Matricula, Modelo, Anio) VALUES ('AAA006','M6',2005)
+INSERT INTO [dbo].[Auto] (Matricula, Modelo, Anio) VALUES ('AAA007','M7',2006)
 
 GO
 

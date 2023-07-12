@@ -3,11 +3,11 @@ la actualizacion automatica para el caso de actualizar o eliminar un banco, mone
 Demostrar el correcto funcionamiento de las restricciones creadas
 Redactar las sentencias que permitan eliminar las restricciones creadas en el paso anterior.*/
 
-/** Cuenta posee IdBanco, hace referencia a la tabla Banco
-* Cuenta posee IdMoneda, hace referencia a la tabla Moneda
-* Cuenta posee IdPersona, hace referencia a la tabla Persona
-* Opera posee IdBanco, hace referencia a la tabla Banco
-* Opera posee IdMoneda, hace referencia a la tabla Moneda
+/* 	Cuenta posee IdBanco, hace referencia a la tabla Banco
+*	Cuenta posee IdMoneda, hace referencia a la tabla Moneda
+* 	Cuenta posee IdPersona, hace referencia a la tabla Persona
+* 	Opera posee IdBanco, hace referencia a la tabla Banco
+* 	Opera posee IdMoneda, hace referencia a la tabla Moneda
 
 El unico tipo de CONSTRAINT que esta creada en Cuenta y Opera es la PRIMARY KEY es PK_Persona.
 No estan creadas la claves foraneas.
@@ -37,8 +37,9 @@ ALTER TABLE Opera DROP CONSTRAINT FK_Opera_IdMoneda;
 /*2 - Listar los bancos que solamente operan todas las monedas que no son el PESO URUGUAYO.
 Utilizar una vista para todas las monedas.*/
 
-CREATE VIEW vBancosQueOperanMonedasMenosElPesoUY AS
-(
+GO
+
+CREATE VIEW vBancosQueOperanMonedasMenosElPesoUY AS (
 	SELECT b.Id
 	FROM Banco AS b
 	EXCEPT
@@ -46,6 +47,8 @@ CREATE VIEW vBancosQueOperanMonedasMenosElPesoUY AS
 	FROM Opera AS o
 	WHERE o.IdMoneda = 'UY'
 )
+
+GO
 
 SELECT *
 FROM vBancosQueOperanMonedasMenosElPesoUY AS b
@@ -67,11 +70,14 @@ UPDATE vBancosQueOperanConTodasMonedasMenosUY
 SET Nombre = 'Banco de la Ciudad de Buenos Aires'
 WHERE Nombre = 'Banco Ciudad'*/
 
-CREATE OR ALTER VIEW vTodosLosBancos AS
-(
+GO
+
+CREATE OR ALTER VIEW vTodosLosBancos AS (
 	SELECT *
 	FROM Banco AS b
 )
+
+GO
 
 UPDATE vTodosLosBancos
 SET Nombre = 'Banco de la Ciudad de Buenos Aires'
@@ -83,6 +89,8 @@ FROM vTodosLosBancos
 /*4 - Crear una funcion que devuelva el valor oro de una moneda. La misma debe recibir como parametro el 
 codigo de la moneda y devolver el valor -1 para el caso en que la moneda no exista.*/
 
+GO
+
 CREATE OR ALTER FUNCTION fValorOroMoneda (@IdMoneda CHAR(2)) RETURNS DECIMAL(18,3) AS
 BEGIN
 	DECLARE @ValorOro DECIMAL(18,3) = -1;
@@ -91,10 +99,14 @@ BEGIN
 	RETURN @ValorOro
 END
 
+GO
+
 SELECT dbo.fValorOroMoneda('UR')
 SELECT dbo.fValorOroMoneda('UY')
 
 -- 5. Crear una funcion que retorne el pasaporte y el nombre de las personas que tienen cuenta en todos los bancos.
+
+GO
 
 CREATE OR ALTER FUNCTION fPersonasConCuentaEnTodosLosBancos () RETURNS TABLE AS
 RETURN (SELECT p.Pasaporte, p.Nombre
@@ -110,10 +122,14 @@ RETURN (SELECT p.Pasaporte, p.Nombre
 						)
 		)
 
+GO
+
 SELECT *
 FROM fPersonasConCuentaEnTodosLosBancos()
 
 -- 6. Crear un SP que muestre por pantalla a las personas que tienen mas de 3 cuentas en dolares en bancos extranjeros.
+
+GO
 
 CREATE OR ALTER PROCEDURE pPersonasConMasDe3CuentasEnDolaresEnBancosExtranjeros AS
 BEGIN
@@ -123,6 +139,8 @@ BEGIN
 	GROUP BY c.IdPersona
 	HAVING COUNT(*) >= 3
 END
+
+GO
 
 /*7 - Crear un SP que reciba por parametro un pasaporte y muestre las cuentas asociadas a la misma. 
 Si el pasaporte no existe, mostrar un mensaje de error.*/
@@ -156,6 +174,8 @@ ALTER TABLE Opera DROP CONSTRAINT FK_Opera_IdBanco_BR;
 ALTER TABLE BancoRespaldo DROP CONSTRAINT PK_Banco_RespaldoId;
 */
 
+GO
+
 CREATE OR ALTER TRIGGER tEliminarBanco ON Banco INSTEAD OF DELETE AS
 BEGIN
 	IF NOT EXISTS (SELECT 1 FROM Deleted AS d JOIN Opera AS o ON d.Id = o.IdBanco WHERE o.IdMoneda LIKE 'AR')
@@ -166,6 +186,8 @@ BEGIN
 	ELSE
 		PRINT('El banco que se quiere eliminar opera con pesos argentinos');
 END
+
+GO
 
 /*9 - Crear un Trigger que actualice el id de moneda en las tablas opera y cuenta para cuando un codigo de moneda 
 sea actualizado en la tabla moneda.*/
@@ -178,8 +200,8 @@ BEGIN
 	UPDATE Cuenta SET IdMoneda = @IdNuevo WHERE IdMoneda = @IdViejo
 END
 
--- 10. Listar a las personas que no tienen ninguna cuenta en "pesos argentinos" en Ningún banco. 
--- Que además tengan al menos dos cuentas en "dólares"
+-- 10. Listar a las personas que no tienen ninguna cuenta en "pesos argentinos" en Ningin banco. 
+-- Que ademï¿½s tengan al menos dos cuentas en "dï¿½lares"
 
 (SELECT c.IdPersona
 FROM Cuenta AS c JOIN Moneda AS m ON c.IdMoneda = m.Id
@@ -196,7 +218,9 @@ SELECT DISTINCT c.IdPersona
 FROM Moneda AS m JOIN Cuenta AS c ON c.IdMoneda = m.Id
 WHERE m.Descripcion = 'Peso Argentino')
 
--- 11. Listar de las monedas que son operadas en todos los bancos, aquellas con el valor oro más alto.
+-- 11. Listar de las monedas que son operadas en todos los bancos, aquellas con el valor oro mas alto.
+
+GO
 
 CREATE OR ALTER VIEW vMonedasQueOperanEnTodosLosBancos AS
 (
@@ -212,6 +236,8 @@ CREATE OR ALTER VIEW vMonedasQueOperanEnTodosLosBancos AS
 						)
 					)
 )
+
+GO
 
 SELECT v.Id
 FROM vMonedasQueOperanEnTodosLosBancos AS v

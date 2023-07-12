@@ -3,4 +3,4 @@ GO
 
 --7)
 
-INSERT INTO [dbo].[Auto] (matrícula,modelo,anio) VALUES ('AAA008','M8',2007)
+INSERT INTO [dbo].[Auto] (Matricula, Modelo, Anio) VALUES ('AAA008', 'M8', 2007);
