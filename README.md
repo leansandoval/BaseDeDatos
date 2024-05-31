@@ -1,12 +1,15 @@
 # SQL
 Ejercicios resueltos de la materia Base de Datos (2009).
 
-## Contenidos
+## Contenidos :open_book:
 * Estructura de una Base de Datos: Creación de una Base de Datos y de tablas.
-* Consultas Simples: Condiciones de búsqueda.
-* Consultas Multitablas, Consultas Sumarias.
+* Consultas 
+  * Simples
+  * Condiciones de búsqueda.
+  * Multitablas
+  * Sumarias.
 * Subconsultas: Aplicación, condiciones de búsqueda.
-* Manipulación de datos: inserción multifila, actualización y eliminación de filas.
+* Manipulación de datos: Inserción multifila, actualización y eliminación de filas.
 * Integridad de Datos: posibles problemas de integridad, reglas de eliminación y actualización.
 * Disparador e integridad.
 * Procedimientos Almacenados.
