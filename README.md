@@ -1,5 +1,5 @@
-# SQL
-Ejercicios resueltos de la materia Base de Datos (2009).
+# Base de Datos
+Ejercicios resueltos de la materia Base de Datos (2009). Realizados el Segundo Cuatrimestre 2022
 
 ## Contenidos :open_book:
 * Estructura
