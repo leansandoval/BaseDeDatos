@@ -1,5 +1,5 @@
 # Base de Datos
-Ejercicios resueltos de la materia Base de Datos (2009). Realizados en el Segundo Cuatrimestre 2022
+Ejercicios resueltos de la materia Base de Datos UNLaM (3636). Realizados en el Segundo Cuatrimestre 2022
 
 ## Contenidos :open_book:
 * Estructura
