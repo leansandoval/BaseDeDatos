@@ -1,5 +1,5 @@
 # Bases de Datos
-Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos UNLaM (3636). Realizados en el Segundo Cuatrimestre 2022.
+Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (3636) - 2C 2022 - UNLaM.
 
 ## Información de la Asignatura
 * **Carrera**: Ingeniería en Informática
