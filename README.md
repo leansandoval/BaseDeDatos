@@ -65,6 +65,7 @@ Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (36
 ### Funciones recursivas implementadas con algoritmos iterativos ó usando Common Table Expressions (CTE)
   
 ### Procesamiento de Transacciones
+![Transacciones](https://scontent.faep28-2.fna.fbcdn.net/v/t39.99422-6/735222803_1031400872722762_4435234212974793794_n.png?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=s1024x1536&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG2Ujodx5GaM5Xkj66fg5MCCZ6-3psZ9uUJnr7emxn25VCnoykTwvSj5Q1lR-2jBgwH8Tunz-E4IKk-km6lnKBv&_nc_ohc=nOUrJ7OjYEcQ7kNvwHon35T&_nc_oc=AdpchmrZ2vzV_uCQhsWNZrds18Ye1C0OpF2HBrE-A4EcE32zlXDlgZ7ycG5MGLmME6-_dW_k-t-F7YAo65sumJCo&_nc_zt=14&_nc_ht=scontent.faep28-2.fna&_nc_gid=81IPWmjGc-UWtuzQwLkvIg&_nc_ss=7b2a8&oh=00_AQTxWj45vF_na48IbmAaZZmF5faeb813VTLrcY0zoR0tjQ&oe=6AF88FDF)
   * Concepto
   * Puntos de guarda
   * Tratamiento de procesamiento multiusuario
