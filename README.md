@@ -23,6 +23,96 @@ Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (36
 * Ybarra, Fernando
 
 ## Contenidos :open_book:
+### Unidad Temática N.º 1 - Sistemas de Gestión de Bases de Datos
+* Sistemas tradicionales de archivos
+  * Características.
+  * Desventajas.
+  * Diferencias con las bases de datos.
+* Introducción a las Bases de Datos
+  * Conceptos.
+  * Carecterísticas.
+  * Ventajas.
+  * Marcado actual.
+* Sistema de base de datos
+  * Componentes.
+  * Estructura de datos relacional.
+  * Conceptos básicos
+    * Atributos.
+    * Tuplas.
+    * Claves.
+    * Relaciones.
+* Usuarios de DBMS
+  * Roles.
+  * Funciones.
+* Administrador de Bases de Datos
+  * Funciones.
+* Arquitectura de los DBMS
+  * Nivel externo.
+  * Conceptual.
+  * Interno.
+* Estructura global de un DBMS
+  * Compoentes.
+  * Secciones posteriores y frontales.
+* Instancias y Esquemas
+  * Independencia de Datos
+    * Concepto.
+    * Clasificación.
+* Nivel Interno
+  * Acceso a la base de datos.
+  * Administración de páginas.
+  * Indexación
+    * Concepto.
+    * Formas de utilización.
+    * Clasificación.
+  * Árboles B y B+.
+* Lenguajes
+  * Lenguaje de Definición de Datos (DDL)
+  * Lenguaje de Manipulación de Datos (DML)
+  * Aplicación práctica.
+* DBMS Distribuidos
+  * Concepto.
+  * Topologías.
+  * Ventajas y desventajas.
+  * Diseño de las base de datos distribuidas.
+
+### Unidad Temática N.º 2 - Modelos de Datos
+* Introducción
+  * Modelo de datos.
+  * Paradigmas.
+  * Proceso de Diseño de una base de datos.
+* Diseño conceptual
+  * Recolección.
+  * Definición de los requerimientos de datos.
+* Calidad del esquema actual
+  * Criterios y como lograrla.
+  * Abstracciones.
+  * Clasificación.
+  * Agregación.
+  * Generalización.
+* Modelos Lógicos basados en Registros
+  * Conceptos y características.
+  * Modelo Jerárquico, de Red y Relacional.
+  * Ventajas y desventajas.
+* Modelos Lógicos basados en Objetos
+  * Características
+  * Ventajas
+  * Desventajas.
+* Modelo Entidad-Relación y Modelo Orientado a Objetos.
+* Modelo Relacional
+  * Estructura de datos relacional.
+  * Dominios.
+  * Relaciones.
+  * Reglas de Integridad: Específicas de las Entidades y Referencial.
+  * Modelo lógico
+    * Datalog y evaluación de consultas.
+    * Funciones recursivas y no recursivas.
+* Álgebra relacional
+  * Operaciones tradicionales de conjuntos.
+  * Operaciones relacionales especiales.
+* Cálculo Relacional.
+* Bases de datos en Internet.
+* Tendencias Actuales. 
+
 ### Estructura
 ![Sentencias DDL](https://scontent.faep28-2.fna.fbcdn.net/v/t39.30808-6/241003893_4319332088162645_7347060820080772127_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFjLP0An8gv_g8-7KyCnOxnNSWprKhjUNU1JamsqGNQ1dI2iJ-7V_dpO1TROayaHEu45h7IRPxGncsZnY8pskma&_nc_ohc=s2l-X54CEMsQ7kNvwERhxI8&_nc_oc=AdoekDDvCN6CHnLwIhOHTHhayppdK4vlGrk4PHitqF8JnQ2GzTTmcX-Dz4FLDK8QLxXI1r1QTlsthrzWAZKaTraa&_nc_zt=23&_nc_ht=scontent.faep28-2.fna&_nc_gid=G2vGSDOxUpDsCQSgGrnhjw&_nc_ss=7b2a8&oh=00_AQR9DMF7alYMXhzmItzp02MMxr2sIPIiZipBOB1QSfvgcA&oe=6AF86BF2)
 * Creación de una Base de Datos
