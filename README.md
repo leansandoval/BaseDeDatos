@@ -11,19 +11,22 @@
 <br>
 
 ## 📑 Índice
-- [Información de la Asignatura](#información-de-la-asignatura)
-- [Trayecto - Infraestructura](#trayecto---infraestructura)
+- [Información de la Asignatura](#informacion-de-la-asignatura)
+- [Trayecto - Infraestructura](#trayecto)
 - [Docentes](#docentes)
 - [Herramientas Utilizadas](#herramientas-utilizadas)
+- [Estructura del Proyecto](#estructura-del-proyecto)
 
 ---
 
+<a id="informacion-de-la-asignatura"></a>
 ## ℹ️ Información de la Asignatura
 * **Carrera**: Ingeniería en Informática
 * **Materia**: Bases de Datos (3670)
 * **Cuatrimestre**: Segundo Cuatrimestre
 * **Año**: 2022
 
+<a id="trayecto"></a>
 ## Trayecto - Programación
 * **Año Académico**: Segundo Año - Primer Cuatrimestre
 * **Responsable / Jefe de catedra**: Ichazo, Veronica
@@ -33,7 +36,8 @@
 * **Correlativas anteriores**
   * Matemática Discreta (3621)
   * Programación Estructurada Básica (3629)
- 
+
+<a id="docentes"></a>
 ## 👨‍🏫 Docentes
 * Halil, Hernan
 * Palomares, Alfonso
@@ -332,3 +336,26 @@
   * Operaciones Espaciales.
 * Bases de Datos móviles
   * Soluciones Actuales.
+
+---
+
+<a id="herramientas-utilizadas"></a>
+## 🛠️ Herramientas Utilizadas
+* **Draw.io**: Para la ejecución y prueba de código de bajo nivel.
+* **RelaX**: Assembly.
+* **SQL Server Management Studio**: .
+
+---
+
+<a id="estructura-del-proyecto"></a>
+## 📁 Estructura del Proyecto
+```text
+📦 Bases de Datos
+ ┣ 📂 Circuitos
+ ┃ ┣ 📜 Ejercicios.circ
+ ┃ ┗ 📜 Enunciados.pdf
+ ┣ 📂 Assembler
+ ┃ ┗ 📜 Ejercicios.asm
+ ┃ ┗ 📜 Enunciados.pdf
+ ┗ 📜 README.md
+```
