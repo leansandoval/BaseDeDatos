@@ -113,48 +113,70 @@ Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (36
 * Bases de datos en Internet.
 * Tendencias Actuales. 
 
-### Estructura
+### Unidad Temática N.º 3 - Teoría de las Dependencias Funcionales
+* Información redundante en las tuplas y anomalías de actualización.
+* Valores nulos en las tuplas.
+* Generación de tuplas espurias.
+* Dependencias funcionales Definición de dependencia funcional.
+* Reglas de inferencia para las dependencias funcionales (Los axiomas de Armstrong y las reglas adicionales).
+* Clausuras de un conjunto de atributos X+
+* Tipos de Dependencias.
+* Claves Candidatas.
+* Equivalencia de conjuntos de dependencias funcionales.
+* Conjuntos mínimos de dependencias funcionales.
+
+### Unidad Temática N.º 4 - Diseño de Bases de Datos
+* Introducción a la Normalización.
+  * Concepto
+  * Finalidad de la Normalización.
+* Descomposición.
+  * Pérdida de información.
+  * Algoritmos de verificación.
+  * Pérdida de dependencias funcionales.
+* Formas Normales:
+  * 1º FN.
+  * 2º FN.
+  * 3º FN.
+* Conceptos de Formas Normales de Boyce/Codd, Cuarta y Quinta. 
+
+### Unidad Temática N.º 5 - Lenguaje de Consulta de Datos
+
+#### Estructura
 ![Sentencias DDL](https://scontent.faep28-2.fna.fbcdn.net/v/t39.30808-6/241003893_4319332088162645_7347060820080772127_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFjLP0An8gv_g8-7KyCnOxnNSWprKhjUNU1JamsqGNQ1dI2iJ-7V_dpO1TROayaHEu45h7IRPxGncsZnY8pskma&_nc_ohc=s2l-X54CEMsQ7kNvwERhxI8&_nc_oc=AdoekDDvCN6CHnLwIhOHTHhayppdK4vlGrk4PHitqF8JnQ2GzTTmcX-Dz4FLDK8QLxXI1r1QTlsthrzWAZKaTraa&_nc_zt=23&_nc_ht=scontent.faep28-2.fna&_nc_gid=G2vGSDOxUpDsCQSgGrnhjw&_nc_ss=7b2a8&oh=00_AQR9DMF7alYMXhzmItzp02MMxr2sIPIiZipBOB1QSfvgcA&oe=6AF86BF2)
 * Creación de una Base de Datos
 * Creación de tablas.
 * Modificación
 * Eliminación
 
-### Consultas
+#### Consultas
 ![Consultas SQL](https://media.licdn.com/dms/image/v2/C4D22AQGC-XsJjhyGMw/feedshare-shrink_800/feedshare-shrink_800/0/1613678407615?e=2147483647&v=beta&t=_Hv6PmFGIvAjZ_fdobmEljArBQAcmxFFTsqgMH0CzaE)
 * Simples
 * Condiciones de búsqueda
 * Multitablas
 * Sumarias.
 
-### Subconsultas
+#### Subconsultas
 ![Subconsultas](https://scontent.faep28-2.fna.fbcdn.net/v/t39.30808-6/706202814_1444183997725075_1684298045250782611_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=s1024x1536&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEC6Q48auNIFPFClh6rupOxDcqhk0waX-QNyqGTTBpf5ByFize_pPCs9DI25uwGglEL3KQdu0s3xckhlQ-Vsfxp&_nc_ohc=TF2TjLZ6e0cQ7kNvwGW1OD_&_nc_oc=Adq1PNK42jsQhaikGLdIRQNOVM6tLEW_dW8V9CRj-xSb4aDigLGldJpND-STS5se0JU235Fl6celTZr9Le7N9h3C&_nc_zt=23&_nc_ht=scontent.faep28-2.fna&_nc_gid=DXF2Z6pojx4lS_s8CbJ-QQ&_nc_ss=7b2a8&oh=00_AQRx26laEfpZZqrIAQbcPnZvYbwmwHx9ac_PPhWo5eXQYA&oe=6AF895BB)
   * Aplicación
   * Condiciones de búsqueda
 
-### Vistas
-![Vistas SQL](https://scontent.fepa1-1.fna.fbcdn.net/v/t39.30808-6/480741654_613163444912518_5324162054683845899_n.jpg?stp=dst-jpg_tt6&cstp=mx1782x2048&ctp=s1782x2048&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEacyydnZbP4JFBpMse60Cpbdoca7hBOiBt2hxruEE6IEoqN0jMfheBixkUZUxU7rf8KGJLIFjHCyt9JHnwQGdK&_nc_ohc=S79PiS8hyuMQ7kNvwHII99Z&_nc_oc=Adrq_hu1f079jUXEx8Ayk2IbqU_g5-yb21NwOFWWJzkizQyDEoc50u0AXmZDO3LsJdPvEKXnK9WHJygk6Ag0--dp&_nc_zt=23&_nc_ht=scontent.fepa1-1.fna&_nc_gid=czhKCrDlh6_IMwMz5sTJKw&_nc_ss=7b2a8&oh=00_AQQdO8zoQmH3Yoj6RGZd4iCForJrCLuomgcJTrWUftrSDg&oe=6AF86AEF)
-* Concepto, ventajas y desventajas
-* Sentencias de creación
-* Actualización de una vista
-
-### Manipulación de datos
+#### Manipulación de datos
 ![Sentencias DML](https://scontent.fepa2-1.fna.fbcdn.net/v/t39.30808-6/240973792_4319332068162647_1212454391036143238_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGXkhuMtDi37w5ufsODmMRsahMK5FHLAHFqEwrkUcsAcesarZSVjoMYxcM2HfU18tPU3ShxO-u6Ya72TEOVw8m9&_nc_ohc=Hpbq9XxCYxIQ7kNvwFFfF_I&_nc_oc=Ado3OhMSR7-u9jwoM52z9Xo66xTflaSctvDBg7LNuXFR34sIcsEQi9jt6ggZL-kJpFuHlLtk2GoK5ltYy7sh2b_L&_nc_zt=23&_nc_ht=scontent.fepa2-1.fna&_nc_gid=JG7rYThEtJysnrFNWgK3mQ&_nc_ss=7b2a8&oh=00_AQTV6nPSfezpNNZHLqL7WRnQ1nfyFQqNcgwPnMjnSAc5KA&oe=6AF89274)
   * Inserción multifila
   * Actualización de filas
   * Eliminación de filas
 
-### Integridad de Datos
+#### Integridad de Datos
   * Posibles problemas de integridad
   * Reglas de eliminación y actualización.
   
-### Disparador e Integridad.
+#### Disparador e Integridad.
   
-### Procedimientos Almacenados.
+#### Procedimientos Almacenados.
   
-### Funciones recursivas implementadas con algoritmos iterativos ó usando Common Table Expressions (CTE)
-  
-### Procesamiento de Transacciones
+#### Funciones recursivas implementadas con algoritmos iterativos ó usando Common Table Expressions (CTE)
+
+#### Procesamiento de Transacciones
 ![Transacciones](https://scontent.faep28-2.fna.fbcdn.net/v/t39.99422-6/735222803_1031400872722762_4435234212974793794_n.png?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=s1024x1536&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG2Ujodx5GaM5Xkj66fg5MCCZ6-3psZ9uUJnr7emxn25VCnoykTwvSj5Q1lR-2jBgwH8Tunz-E4IKk-km6lnKBv&_nc_ohc=nOUrJ7OjYEcQ7kNvwHon35T&_nc_oc=AdpchmrZ2vzV_uCQhsWNZrds18Ye1C0OpF2HBrE-A4EcE32zlXDlgZ7ycG5MGLmME6-_dW_k-t-F7YAo65sumJCo&_nc_zt=14&_nc_ht=scontent.faep28-2.fna&_nc_gid=81IPWmjGc-UWtuzQwLkvIg&_nc_ss=7b2a8&oh=00_AQTxWj45vF_na48IbmAaZZmF5faeb813VTLrcY0zoR0tjQ&oe=6AF88FDF)
   * Concepto
   * Puntos de guarda
@@ -162,8 +184,62 @@ Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (36
   * Interbloqueos
   * Técnicas de cerramiento: explícito, niveles y parámetros de cierre.
  
-### Creación y eliminación de índices.
+#### Creación y eliminación de índices.
 
-### Seguridad: concepto, asignación y retiro de privilegios.
-  
-### Catálogo de sistema: contenido, obtención de información. 
+#### Vistas
+![Vistas SQL](https://scontent.fepa1-1.fna.fbcdn.net/v/t39.30808-6/480741654_613163444912518_5324162054683845899_n.jpg?stp=dst-jpg_tt6&cstp=mx1782x2048&ctp=s1782x2048&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEacyydnZbP4JFBpMse60Cpbdoca7hBOiBt2hxruEE6IEoqN0jMfheBixkUZUxU7rf8KGJLIFjHCyt9JHnwQGdK&_nc_ohc=S79PiS8hyuMQ7kNvwHII99Z&_nc_oc=Adrq_hu1f079jUXEx8Ayk2IbqU_g5-yb21NwOFWWJzkizQyDEoc50u0AXmZDO3LsJdPvEKXnK9WHJygk6Ag0--dp&_nc_zt=23&_nc_ht=scontent.fepa1-1.fna&_nc_gid=czhKCrDlh6_IMwMz5sTJKw&_nc_ss=7b2a8&oh=00_AQQdO8zoQmH3Yoj6RGZd4iCForJrCLuomgcJTrWUftrSDg&oe=6AF86AEF)
+* Concepto, ventajas y desventajas
+* Sentencias de creación
+* Actualización de una vista
+
+#### Seguridad
+* Concepto.
+* Asignación.
+* Retiro de privilegios.
+
+#### Catálogo de sistema
+* Contenido
+* Obtención de información.
+
+### Unidad Temática N.º 6 - Procesamiento y Optimización de Consultas
+* Optimización de consultas.
+  * Etapas en el procesamiento de consultas.
+  * Leyes de Transformación.
+  * Estrategia de descomposición de consultas.
+  * Estrategias de procesamiento de consultas.
+  * Componentes del costo de ejecución de una consulta.
+* Catálogo de las Bases de datos y su importancia en la optimización de consultas.
+  * Análisis de un plan de ejecución de un Motor de Base Datos Comercial.
+  * Ajustes del Rendimiento y Estrategias de Optimización para la reducción de costos en el procesamiento de consultas.
+
+### Unidad Temática N.º 7 - Transacciones y Control de Concurrencia
+* Concepto de transacciones.
+* Propiedades ACID.
+* Procesamiento de transacciones.
+* Estados de las transacciones.
+* Recuperación del sistema y puntos de verificación.
+* Planes de recuperación de transacciones.
+* Problemas de concurrencia de las transacciones.
+* Tipos de Bloqueos.
+* Resolución del bloqueo mortal y la espera indefinida.
+* Pruebas de seriabilidad.
+* Protocolo de dos fases.
+* Control de concurrencia basado en ordenamientos por marcas de tiempo.
+* Técnicas de validación.
+* Granularidad múltiple.
+* Esquemas multiversión.
+
+### Unidad Temática N.º 8 - Seguridad e Integridad de las Bases de Datos
+* Tipos de seguridad.
+* La seguridad de las Bases de Datos.
+* Tipos de Fallas. Planes de contingencia.
+* Técnicas de control de acceso y uso indiscriminado de la información.
+* Privilegios, autorizaciones y vistas.
+* Cifrado de Datos.
+
+### Unidad Temática N.º 9 - Sistemas de Bases de Datos Distribuidas
+* Estructuras de Bases de Datos Distribuidas.
+* Consideraciones al distribuir la Base de Datos.
+* Transparencia y autonomía.
+* Técnicas de fragmentación, replica y asignación de datos para el diseño de las Bases de Datos Distribuidas.
+* Procesamiento distribuido de consultas.
