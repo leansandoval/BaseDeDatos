@@ -37,7 +37,7 @@
 * **Año**: 2022
 
 <a id="trayecto"></a>
-## 🛤️ Trayecto - Programación
+## 💻 Trayecto - Programación
 * **Año Académico**: Segundo Año - Primer Cuatrimestre
 * **Responsable / Jefe de cátedra**: Ichazo, Veronica
 * **Carga Horaria Semanal**: 4 hs
