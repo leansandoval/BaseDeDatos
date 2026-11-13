@@ -1,5 +1,13 @@
-# Bases de Datos
-Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (3636) - 2C 2022 - UNLaM.
+<div align="center">
+  <h1>🛢️ Bases de Datos</h1>
+  <p><em>Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (3636) - 2C 2022 - UNLaM.</em></p>
+
+  <!-- Badges -->
+  <img src="https://img.shields.io/badge/Universidad-UNLaM-1F4F90?style=for-the-badge&logo=google-scholar&logoColor=white" alt="UNLaM" />
+  <img src="https://img.shields.io/badge/Año-2022-2EA043?style=for-the-badge" alt="2022" />
+  <img src="https://img.shields.io/badge/Estado-Completado-blue?style=for-the-badge" alt="Completado" />
+</div>
+
 
 ## Información de la Asignatura
 * **Carrera**: Ingeniería en Informática
