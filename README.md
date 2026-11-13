@@ -82,6 +82,8 @@ Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (36
 
 ![Tipos de Modelos de Datos](https://imgv2-2-f.scribdassets.com/img/document/477615112/original/34eb783418/1?v=1)
 
+![Bases de Datos Relacionales vs Bases de Datos no Relacionales](https://instagram.faep28-2.fna.fbcdn.net/v/t39.30808-6/778972654_1336772775146063_7018399656362643174_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=Mzk2ODE3NDAxMjc5NDQxNjgxOA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI4MC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=LKKnGsxONywQ7kNvwEQx89p&_nc_oc=AdpsjYsSSEyHa_zvLYF6RLkpv9-6p0DdhKjJEMWXTyTDnpevOQcjJ5hTXdTEQV1Fpnifu_a4Z8P7u2DuT5RltcLV&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.faep28-2.fna&_nc_gid=RHPF_4wU8jFO0Qpy0Vma_A&_nc_ss=7a22e&oh=00_AQRXQ_Z-nuDAiW8oMz2piPLlJzrp41UU-lLb47WaVVZX2A&oe=6AFC43B3)
+
 * Introducción
   * Modelo de datos.
   * Paradigmas.
@@ -214,6 +216,9 @@ Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (36
 * Obtención de información.
 
 ### Unidad Temática N.º 6 - Procesamiento y Optimización de Consultas
+
+![Estrategias para Optimizar Consultas SQL](https://scontent.faep28-1.fna.fbcdn.net/v/t39.30808-6/490152007_1230345149091347_2128454070160642628_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x2000&ctp=s1200x2000&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEo79K43Q2U8RjXqMq9wVn-W-m3eZgBX3Vb6bd5mAFfdbOCLNcO8uhHJPZRJ-uHiBls5KhUdCpe8n60RKdL2KZq&_nc_ohc=QyrtYaGZMSsQ7kNvwGp5_oq&_nc_oc=AdpF-cWWuHz1FyY2OTfmAT3x6oleuPe2OkZw8ghJF3IV5BcXHBzfcGkFEPXu_xi-cheKvZQJQsMOhHQMGuKBZQrb&_nc_zt=23&_nc_ht=scontent.faep28-1.fna&_nc_gid=KtKoEUkvieBqy9oN3aJxsg&_nc_ss=7b2a8&oh=00_AQRzOK2JnlYXSIymMoVx9RLakibTEB0p2ognSsM0_SP1HQ&oe=6AFC3F88)
+
 * Optimización de consultas.
   * Etapas en el procesamiento de consultas.
   * Leyes de Transformación.
@@ -225,6 +230,9 @@ Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (36
   * Ajustes del Rendimiento y Estrategias de Optimización para la reducción de costos en el procesamiento de consultas.
 
 ### Unidad Temática N.º 7 - Transacciones y Control de Concurrencia
+
+![Locking en Bases de Datos](https://instagram.faep28-2.fna.fbcdn.net/v/t39.30808-6/715910533_122281530692189612_4279460914672464774_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=MzkxNDM1OTQ1NzIyNDU4NTExMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI1NC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=Nh7HW8lAT1sQ7kNvwFoUpiA&_nc_oc=AdolP58WI_C56ycTCuoIx3YHWUhwKFCL3cXxq95KLjD4Y3FkK-vS70UYC8-gHL9bqJUG8bIYKD8LNQyAzbz_cotF&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.faep28-2.fna&_nc_gid=VA2ACOLFLvgnU43c-V4Ovg&_nc_ss=7a22e&oh=00_AQQeLgLz6miQsZN6Sn2IptYi9zMqKw9Gw9uWzcqQfTAe8A&oe=6AFC3497)
+
 * Concepto de transacciones.
 * Propiedades ACID.
 * Procesamiento de transacciones.
@@ -242,16 +250,49 @@ Guía práctica con ejercicios resueltos de SQL de la materia Bases de Datos (36
 * Esquemas multiversión.
 
 ### Unidad Temática N.º 8 - Seguridad e Integridad de las Bases de Datos
+
+![Seguridad de Bases de Datos](https://notasinformaticas.com/wp-content/uploads/2018/04/Infografia_seguridad_base_datos.png)
+
 * Tipos de seguridad.
 * La seguridad de las Bases de Datos.
-* Tipos de Fallas. Planes de contingencia.
+* Tipos de Fallas.
+* Planes de contingencia.
 * Técnicas de control de acceso y uso indiscriminado de la información.
 * Privilegios, autorizaciones y vistas.
 * Cifrado de Datos.
 
 ### Unidad Temática N.º 9 - Sistemas de Bases de Datos Distribuidas
+
+![Sistemas de Bases de Datos Distribuidas](https://instagram.faep28-2.fna.fbcdn.net/v/t39.30808-6/778985268_1340771434746197_1413887008391237872_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=Mzk3MTY4NzAzOTIwMTQwNTg2MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI4MC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=TsgjQ8o_WqcQ7kNvwGpolFv&_nc_oc=Adof2-RkYZ8KuIfBCUk4YxSrynPDBOyNS_VwiyrZtJRs6TVWJ0wXHulw31D7XySU3ELm8Q7dKYl1SixwKCVsI03E&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.faep28-2.fna&_nc_gid=CfRHU2dNkrF1EcVIEsavvw&_nc_ss=7a22e&oh=00_AQRHjRN4USpQcZobnhdc_tpO8NB7NNdLJeiFbBbiUsSrOw&oe=6AFC45B5)
+
 * Estructuras de Bases de Datos Distribuidas.
 * Consideraciones al distribuir la Base de Datos.
 * Transparencia y autonomía.
 * Técnicas de fragmentación, replica y asignación de datos para el diseño de las Bases de Datos Distribuidas.
 * Procesamiento distribuido de consultas.
+* Recuperación en Sistemas Distribuidos.
+* Protocolos de compromiso.
+* Relación con la arquitectura cliente servidor.
+
+### Unidad Temática N.º 10 - Bases de Datos Avanzadas
+
+![Tipos de Bases de Datos](https://instagram.fepa2-1.fna.fbcdn.net/v/t51.82787-15/585223136_17849432763600313_2431177948249366623_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=Mzc3NTk4NTEwNDc5NTUxODc0MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=FA-AsenfjR0Q7kNvwGHeuKp&_nc_oc=AdqdDUqGx8McFMvFRBJfsKSOx9SivGiexJmEIAn9bXif6LAN3U-93uQpSkhzk1-oJEwIHahNxOPtoaff6ohbgn9a&_nc_zt=23&_nc_ht=instagram.fepa2-1.fna&_nc_gid=ucNc5pR77HhmNi7tgd4Bdw&_nc_ss=7b6a8&oh=00_AQSdVtihlO7RQUXmAF3TIvCnLZNoQNPv3JJ9IhZ6_O4ecg&oe=6AFC5E58)
+
+![Bases de Datos Espaciales](https://image.slidesharecdn.com/infografabasesdedatosespaciales-231010042821-ab5d3714/75/Infografia-bases-de-datos-espaciales-pdf-1-2048.jpg)
+
+* Modelo Semiestructurado y XML
+  * Cultura Web vs Cultura de Base de Datos.
+* Representación de los datos mediante grafos
+  * Datalog.
+  * Problemas del HTML.
+  * Sintaxis Básica del XML.
+  * Uso de los DTD (Data Type Definition).
+  * Contribuciones del XML a la WEB.
+* Base de Datos Temporales
+  * Marcas de Tiempo.
+  * Relación Temporal.
+* Base de Datos Espaciales
+  * Puntos, Líneas y Regiones.
+  * Operaciones Espaciales.
+* Bases de Datos móviles
+  * Soluciones Actuales.
