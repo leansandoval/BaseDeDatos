@@ -257,22 +257,6 @@
 * **Creación y eliminación de índices.**
 * **Catálogo de sistema:** Contenido y obtención de información.
 
-### Procesamiento de Transacciones
-<div align="center">
-  <img src="https://scontent.faep28-2.fna.fbcdn.net/v/t39.99422-6/735222803_1031400872722762_4435234212974793794_n.png?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=s1024x1536&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG2Ujodx5GaM5Xkj66fg5MCCZ6-3psZ9uUJnr7emxn25VCnoykTwvSj5Q1lR-2jBgwH8Tunz-E4IKk-km6lnKBv&_nc_ohc=nOUrJ7OjYEcQ7kNvwHon35T&_nc_oc=AdpchmrZ2vzV_uCQhsWNZrds18Ye1C0OpF2HBrE-A4EcE32zlXDlgZ7ycG5MGLmME6-_dW_k-t-F7YAo65sumJCo&_nc_zt=14&_nc_ht=scontent.faep28-2.fna&_nc_gid=81IPWmjGc-UWtuzQwLkvIg&_nc_ss=7b2a8&oh=00_AQTxWj45vF_na48IbmAaZZmF5faeb813VTLrcY0zoR0tjQ&oe=6AF88FDF" alt="Transacciones" width="350" />
-  <br>
-  <sup><em>Ciclo de vida de una transacción</em></sup>
-</div>
-<br>
-
-* Concepto.
-* Puntos de guarda.
-* Tratamiento de procesamiento multiusuario.
-* Interbloqueos y técnicas de cerramiento
-    * Explícito.
-    * Niveles.
-    * Parámetros de cierre.
-
 ### Vistas
 <div align="center">
   <img src="https://scontent.fepa1-1.fna.fbcdn.net/v/t39.30808-6/480741654_613163444912518_5324162054683845899_n.jpg?stp=dst-jpg_tt6&cstp=mx1782x2048&ctp=s1782x2048&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEacyydnZbP4JFBpMse60Cpbdoca7hBOiBt2hxruEE6IEoqN0jMfheBixkUZUxU7rf8KGJLIFjHCyt9JHnwQGdK&_nc_ohc=S79PiS8hyuMQ7kNvwHII99Z&_nc_oc=Adrq_hu1f079jUXEx8Ayk2IbqU_g5-yb21NwOFWWJzkizQyDEoc50u0AXmZDO3LsJdPvEKXnK9WHJygk6Ag0--dp&_nc_zt=23&_nc_ht=scontent.fepa1-1.fna&_nc_gid=czhKCrDlh6_IMwMz5sTJKw&_nc_ss=7b2a8&oh=00_AQQdO8zoQmH3Yoj6RGZd4iCForJrCLuomgcJTrWUftrSDg&oe=6AF86AEF" alt="Vistas SQL" width="550" />
@@ -314,6 +298,13 @@
 ## Unidad Temática N.º 7 - Transacciones y Control de Concurrencia
 
 <div align="center">
+  <img src="https://scontent.faep28-2.fna.fbcdn.net/v/t39.99422-6/735222803_1031400872722762_4435234212974793794_n.png?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=s1024x1536&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG2Ujodx5GaM5Xkj66fg5MCCZ6-3psZ9uUJnr7emxn25VCnoykTwvSj5Q1lR-2jBgwH8Tunz-E4IKk-km6lnKBv&_nc_ohc=nOUrJ7OjYEcQ7kNvwHon35T&_nc_oc=AdpchmrZ2vzV_uCQhsWNZrds18Ye1C0OpF2HBrE-A4EcE32zlXDlgZ7ycG5MGLmME6-_dW_k-t-F7YAo65sumJCo&_nc_zt=14&_nc_ht=scontent.faep28-2.fna&_nc_gid=81IPWmjGc-UWtuzQwLkvIg&_nc_ss=7b2a8&oh=00_AQTxWj45vF_na48IbmAaZZmF5faeb813VTLrcY0zoR0tjQ&oe=6AF88FDF" alt="Transacciones" width="350" />
+  <br>
+  <sup><em>Ciclo de vida de una transacción</em></sup>
+</div>
+<br>
+
+<div align="center">
   <img src="https://instagram.faep28-2.fna.fbcdn.net/v/t39.30808-6/715910533_122281530692189612_4279460914672464774_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=MzkxNDM1OTQ1NzIyNDU4NTExMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI1NC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=Nh7HW8lAT1sQ7kNvwFoUpiA&_nc_oc=AdolP58WI_C56ycTCuoIx3YHWUhwKFCL3cXxq95KLjD4Y3FkK-vS70UYC8-gHL9bqJUG8bIYKD8LNQyAzbz_cotF&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.faep28-2.fna&_nc_gid=VA2ACOLFLvgnU43c-V4Ovg&_nc_ss=7a22e&oh=00_AQQeLgLz6miQsZN6Sn2IptYi9zMqKw9Gw9uWzcqQfTAe8A&oe=6AFC3497" alt="Locking en Bases de Datos" width="550" />
   <br>
   <sup><em>Mecanismos de bloqueo y concurrencia</em></sup>
@@ -322,11 +313,17 @@
 
 * Concepto de transacciones y Propiedades ACID.
 * Procesamiento y estados de las transacciones.
+* Puntos de guarda.
 * Recuperación del sistema, puntos de verificación y planes de recuperación.
 * Problemas de concurrencia, tipos de bloqueos y resolución del bloqueo mortal.
 * Pruebas de seriabilidad y Protocolo de dos fases.
+* Tratamiento de procesamiento multiusuario.
 * Control de concurrencia basado en ordenamientos por marcas de tiempo.
 * Técnicas de validación, granularidad múltiple y esquemas multiversión.
+* Interbloqueos y técnicas de cerramiento
+    * Explícito.
+    * Niveles.
+    * Parámetros de cierre.
 
 ---
 
