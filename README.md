@@ -5,8 +5,8 @@
   <!-- Badges -->
   <img src="https://img.shields.io/badge/Universidad-UNLaM-1F4F90?style=for-the-badge&logo=google-scholar&logoColor=white" alt="UNLaM" />
   <img src="https://img.shields.io/badge/Año-2022-2EA043?style=for-the-badge" alt="2022" />
-  <img src="https://img.shields.io/badge/Estado-Completado-blue?style=for-the-badge" alt="Completado" />
   <img src="https://img.shields.io/badge/Lenguaje-SQL-0078D4?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL" />
+  <img src="https://img.shields.io/badge/Estado-Completado-blue?style=for-the-badge" alt="Completado" />
 </div>
 
 <br>
