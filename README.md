@@ -60,7 +60,7 @@
 ## Unidad Temática N.º 1 - Sistemas de Gestión de Bases de Datos
 
 <div align="center">
-  <img src="https://wrmartineza.github.io/Administracion-de-base-de-datos/html5-imagenes/manejadores%20de%20base%20de%20datos.jpg" alt="Sistema Gestor de Base de Datos" width="550" />
+  <img width="700" alt="Sistema Gestor de Base de Datos" src="https://github.com/user-attachments/assets/154bd619-c99d-496c-b882-8f40ffe69690" />
   <br>
   <sup><em>Esquema de un Sistema Gestor de Bases de Datos (SGBD)</em></sup>
 </div>
@@ -93,14 +93,14 @@
 ## Unidad Temática N.º 2 - Modelos de Datos
 
 <div align="center">
-  <img src="https://imgv2-2-f.scribdassets.com/img/document/477615112/original/34eb783418/1?v=1" alt="Tipos de Modelos de Datos" width="550" />
+  <img width="700" alt="Tipos de Modelos de Datos" src="https://github.com/user-attachments/assets/a0d14bb5-4c37-4d87-9abe-281cb04022e7" />
   <br>
   <sup><em>Evolución de los Modelos de Datos</em></sup>
 </div>
 <br>
 
 <div align="center">
-  <img src="https://instagram.faep28-2.fna.fbcdn.net/v/t39.30808-6/778972654_1336772775146063_7018399656362643174_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=Mzk2ODE3NDAxMjc5NDQxNjgxOA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI4MC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=LKKnGsxONywQ7kNvwEQx89p&_nc_oc=AdpsjYsSSEyHa_zvLYF6RLkpv9-6p0DdhKjJEMWXTyTDnpevOQcjJ5hTXdTEQV1Fpnifu_a4Z8P7u2DuT5RltcLV&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.faep28-2.fna&_nc_gid=RHPF_4wU8jFO0Qpy0Vma_A&_nc_ss=7a22e&oh=00_AQRXQ_Z-nuDAiW8oMz2piPLlJzrp41UU-lLb47WaVVZX2A&oe=6AFC43B3" alt="Relacionales vs No Relacionales" width="550" />
+  <img width="700" alt="Relacionales vs No Relacionales" src="https://github.com/user-attachments/assets/7978265a-2f95-4873-a799-0c9d40ff61f2" />
   <br>
   <sup><em>Bases de Datos Relacionales vs No Relacionales</em></sup>
 </div>
@@ -126,7 +126,7 @@
 ## Unidad Temática N.º 3 - Teoría de las Dependencias Funcionales
 
 <div align="center">
-  <img src="https://image.slidesharecdn.com/ismael-151104011739-lva1-app6892/75/Dependencias-Funcionales-1-2048.jpg" alt="Dependencias Funcionales" width="550" />
+  <img width="700" alt="Dependencias Funcionales" src="https://github.com/user-attachments/assets/e7a5f5b4-2994-4344-aff1-d0d7c49582c1" />
   <br>
   <sup><em>Concepto de Dependencias Funcionales</em></sup>
 </div>
