@@ -173,7 +173,9 @@
 </div>
 <br>
 
-* Creación de una Base de Datos y de tablas.
+* Creación
+    * Base de Datos
+    * Tablas.
 * Modificación y eliminación de estructuras.
 
 ### Consultas
@@ -184,7 +186,8 @@
 </div>
 <br>
 
-* Consultas simples y condiciones de búsqueda.
+* Consultas simples
+* Condiciones de búsqueda.
 * Consultas multitablas y sumarias.
 
 ### Subconsultas
@@ -195,7 +198,8 @@
 </div>
 <br>
 
-* Aplicación práctica y condiciones de búsqueda avanzadas.
+* Aplicación práctica
+* Condiciones de búsqueda avanzadas.
 
 ### Manipulación de datos (DML)
 <div align="center">
@@ -205,15 +209,52 @@
 </div>
 <br>
 
-* Inserción multifila, actualización y eliminación de filas.
+* Inserción multifila
+* Actualización de filas.
+* Eliminación de filas.
 
 ### Temas Adicionales de la Unidad
+
+<div align="center">
+  <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*Zq09dxWQLm9uZZIV_nlr3Q.png" alt="Cascade vs Restrict" width="450" />
+  <br>
+  <sup><em>Cascade vs Restrict</em></sup>
+</div>
+<br>
+
+<div align="center">
+  <img src="https://doc-assets.studocu.com/b0df6515adcb90e6d054c7544028f6ba/html/bg1.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2RvYy1hc3NldHMuc3R1ZG9jdS5jb21cL2IwZGY2NTE1YWRjYjkwZTZkMDU0Yzc1NDQwMjhmNmJhXC9odG1sXC8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk0ODg2OTY5fX19XX0_&Signature=Htnnq4jhNTK21DFSxlbnvNR62~ESwkGYWRUZj5U4O7WhbDCT6rAf3vcsEagXuMNkad3RM1Y0bTTr~BxiXBw3jks4T5AvfnpIWlDR9VJhgRRKH898-HJjbKZqOaB16u6vGw05g2ARxiXUIlSNCPnxbJwTHVkpozc-5UFYax2jrBD-WJmdpT29yHmoWUU0GrvRkN0moO0vbU1M06-LBzH0PkArUn6fPyk1y7XkaURWEXhHEX8B8JTj6pxxZVsdWACnos6BsU1rg~enWaz6hxrJVqGqfnlIjo723zbZfuhU3J8UgKz-Y2sXmIXjvy8m5pGMfDrvTE2lq1rsOQaCcN0NSQ__&Key-Pair-Id=APKAJ535ZH3ZAIIOADHQ" alt="Triggers" width="450" />
+  <br>
+  <sup><em>Triggers en SQL</em></sup>
+</div>
+<br>
+
+<div align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVkZQmIvz0JTgQZYl1OunfZTNinfvl2h6zJacOElNfH_gnZ-JGKt_av04&s=10" alt="Stored Procedures" width="450" />
+  <br>
+  <sup><em>Stored Procedures en SQL</em></sup>
+</div>
+<br>
+
+<div align="center">
+  <img src="https://instagram.fepa2-1.fna.fbcdn.net/v/t51.82787-15/784616545_17905165230503795_416882920990780148_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=Mzk3MjM2OTAxNzkwNzE5Njk3Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQwNC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=dAiYQFijItQQ7kNvwGQWs6N&_nc_oc=Adp954dqIEYU0l25UvOur63BGznpWA71jDCifqwsbxfNg6A9JgnzC0s50wwihn2tMFg3Ywe-mlbcGh7kCfxH7b3s&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fepa2-1.fna&_nc_gid=a5T9axLFDxERkmQ5h8f0Yg&_nc_ss=7a22e&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSOFT7b27yWY8zZuOhq9MDUh9vHkPOpiZ7bfi08vtz-hw&oe=6B006204" alt="CTE vs Subconsultas" width="450" />
+  <br>
+  <sup><em>CTE vs Subconsultas</em></sup>
+</div>
+<br>
+
+<div align="center">
+  <img src="https://instagram.fepa1-1.fna.fbcdn.net/v/t39.30808-6/715442929_122281526450189612_8749987936720633822_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ig_cache_key=MzkxMzU3NDQyMzMyNzczNjI3Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI1NC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=23_wtbIhwwcQ7kNvwHVImG6&_nc_oc=AdogPVxmeIb7Sgl3BnPb0QOPYyjIEAy4PiJxmT5sXTxSDdB7hXysMclCyBtirWbH6khrS9c41WXwoAQSuNL_mjGh&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fepa1-1.fna&_nc_gid=bpndQllIYuZzYHmQTutHvw&_nc_ss=7a22e&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQJW9Ky84nEkr0yC_ScGmh0orEdB9tMGZv0XLGDVx0iRg&oe=6B004686" alt="Índices" width="450" />
+  <br>
+  <sup><em>Índices en SQL</em></sup>
+</div>
+<br>
+
 * **Integridad de Datos:** Posibles problemas, reglas de eliminación y actualización.
 * **Disparadores (Triggers) e Integridad.**
 * **Procedimientos Almacenados (Stored Procedures).**
 * **Funciones recursivas:** Implementadas con algoritmos iterativos o usando Common Table Expressions (CTE).
 * **Creación y eliminación de índices.**
-* **Seguridad:** Concepto, asignación y retiro de privilegios.
 * **Catálogo de sistema:** Contenido y obtención de información.
 
 ### Procesamiento de Transacciones
@@ -224,8 +265,13 @@
 </div>
 <br>
 
-* Concepto, puntos de guarda y tratamiento de procesamiento multiusuario.
-* Interbloqueos y técnicas de cerramiento (explícito, niveles y parámetros de cierre).
+* Concepto.
+* Puntos de guarda.
+* Tratamiento de procesamiento multiusuario.
+* Interbloqueos y técnicas de cerramiento
+    * Explícito.
+    * Niveles.
+    * Parámetros de cierre.
 
 ### Vistas
 <div align="center">
@@ -235,7 +281,12 @@
 </div>
 <br>
 
-* Concepto, ventajas, desventajas, sentencias de creación y actualización.
+* Concepto.
+* Ventajas
+* Desventajas
+* Sentencias
+    * Creación.
+    * Actualización.
 
 ---
 
@@ -289,10 +340,26 @@
 </div>
 <br>
 
+<div align="center">
+  <img src="https://instagram.faep28-1.fna.fbcdn.net/v/t51.71878-15/767617831_1597484661931742_6873049211020578777_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=Mzk1OTYzOTQ3MDk2OTQwMTIyNjE2NjIxODk2OTU0NzE4ODc%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjY0MC5zZHIudmlkZW9fdXNlcl9zZWxlY3RlZF90aHVtYm5haWwuQzMifQ%3D%3D&_nc_ohc=A_1TyHpl824Q7kNvwENx1tr&_nc_oc=Adq8modQhUUGVsNve_gCd3JWLgO6IvFo4G-scsVUlc-PXUeDtv0FZ7VKuDIDI0JWf8AXsOgviGjQU_94yyfRRDV5&_nc_zt=23&_nc_ht=instagram.faep28-1.fna&_nc_gid=k6cP0FQNABNkmYWEhpWL4Q&_nc_ss=7b6a8&_nc_ct=RQosPBUIFQ4lBAAAAA&oh=00_AQQQxnG6n9MBXtRjvDig4XXqrm7lHEhIGY2NpSvZ3dXX2A&oe=6B003CC2" alt="DCL" width="550" />
+  <br>
+  <sup><em>DCL - Data Control Language</em></sup>
+</div>
+<br>
+
+<div align="center">
+  <img src="https://instagram.fepa2-1.fna.fbcdn.net/v/t51.75761-15/479160482_18047276459216593_6606635892535944524_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=MzU2NzM2MDI2MDczMTIzMTExNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=aEuoGlAQOGUQ7kNvwHHHniL&_nc_oc=Adqe1NHmZbqiWkZVz4N4LbJYA2L7JVW2lcfoN0Ar_QBDKTwE1tBJLbfdG5cpkWc1_Bqh3jC83s0xfxtv3zjZAomg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fepa2-1.fna&_nc_gid=AAc4IIe0IJ1Y-DuP4JSNwA&_nc_ss=7a22e&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQfJh4dhcZ-Nd8sWmlrZoi1kCniUjQ_WfdmBLrFvrjLSw&oe=6B004A8A" alt="DCL Ejemplos" width="550" />
+  <br>
+  <sup><em>DCL - Ejemplos</em></sup>
+</div>
+<br>
+
+* Concepto
 * Tipos de seguridad y la seguridad específica de las Bases de Datos.
 * Tipos de fallas y planes de contingencia.
 * Técnicas de control de acceso y uso indiscriminado de la información.
 * Privilegios, autorizaciones, vistas y cifrado de datos.
+* Asignación y retiro de privilegios.
 
 ---
 
