@@ -167,7 +167,7 @@
 
 ### Estructura (DDL)
 <div align="center">
-  <img src="https://scontent.faep28-2.fna.fbcdn.net/v/t39.30808-6/241003893_4319332088162645_7347060820080772127_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFjLP0An8gv_g8-7KyCnOxnNSWprKhjUNU1JamsqGNQ1dI2iJ-7V_dpO1TROayaHEu45h7IRPxGncsZnY8pskma&_nc_ohc=s2l-X54CEMsQ7kNvwERhxI8&_nc_oc=AdoekDDvCN6CHnLwIhOHTHhayppdK4vlGrk4PHitqF8JnQ2GzTTmcX-Dz4FLDK8QLxXI1r1QTlsthrzWAZKaTraa&_nc_zt=23&_nc_ht=scontent.faep28-2.fna&_nc_gid=G2vGSDOxUpDsCQSgGrnhjw&_nc_ss=7b2a8&oh=00_AQR9DMF7alYMXhzmItzp02MMxr2sIPIiZipBOB1QSfvgcA&oe=6AF86BF2" alt="Sentencias DDL" width="450" />
+  <img width="700" alt="Sentencias DDL" src="https://github.com/user-attachments/assets/c0ba65cb-4358-4a13-9a12-da83759ee3a6" />
   <br>
   <sup><em>Data Definition Language (DDL)</em></sup>
 </div>
@@ -180,7 +180,7 @@
 
 ### Consultas
 <div align="center">
-  <img src="https://media.licdn.com/dms/image/v2/C4D22AQGC-XsJjhyGMw/feedshare-shrink_800/feedshare-shrink_800/0/1613678407615?e=2147483647&v=beta&t=_Hv6PmFGIvAjZ_fdobmEljArBQAcmxFFTsqgMH0CzaE" alt="Consultas SQL" width="550" />
+  <img width="700" alt="Consultas SQL" src="https://github.com/user-attachments/assets/84f31137-a6d0-4adc-8ab3-aaa34059fee2" />
   <br>
   <sup><em>Estructura de consultas SQL</em></sup>
 </div>
@@ -203,7 +203,7 @@
 
 ### Manipulación de datos (DML)
 <div align="center">
-  <img src="https://scontent.fepa2-1.fna.fbcdn.net/v/t39.30808-6/240973792_4319332068162647_1212454391036143238_n.png?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGXkhuMtDi37w5ufsODmMRsahMK5FHLAHFqEwrkUcsAcesarZSVjoMYxcM2HfU18tPU3ShxO-u6Ya72TEOVw8m9&_nc_ohc=Hpbq9XxCYxIQ7kNvwFFfF_I&_nc_oc=Ado3OhMSR7-u9jwoM52z9Xo66xTflaSctvDBg7LNuXFR34sIcsEQi9jt6ggZL-kJpFuHlLtk2GoK5ltYy7sh2b_L&_nc_zt=23&_nc_ht=scontent.fepa2-1.fna&_nc_gid=JG7rYThEtJysnrFNWgK3mQ&_nc_ss=7b2a8&oh=00_AQTV6nPSfezpNNZHLqL7WRnQ1nfyFQqNcgwPnMjnSAc5KA&oe=6AF89274" alt="Sentencias DML" width="450" />
+  <img width="700" alt="Sentencias DML" src="https://github.com/user-attachments/assets/08679903-840e-408e-b860-97d814b80355" />
   <br>
   <sup><em>Data Manipulation Language (DML)</em></sup>
 </div>
@@ -216,7 +216,7 @@
 ### Temas Adicionales de la Unidad
 
 <div align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*Zq09dxWQLm9uZZIV_nlr3Q.png" alt="Cascade vs Restrict" width="450" />
+  <img width="700" alt="Cascade vs Restrict" src="https://github.com/user-attachments/assets/05308c31-354a-4e0a-b4e1-2435db806082" />
   <br>
   <sup><em>Cascade vs Restrict</em></sup>
 </div>
@@ -230,7 +230,7 @@
 <br>
 
 <div align="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVkZQmIvz0JTgQZYl1OunfZTNinfvl2h6zJacOElNfH_gnZ-JGKt_av04&s=10" alt="Stored Procedures" width="450" />
+  <img width="700" alt="Stored Procedures" src="https://github.com/user-attachments/assets/e1aae655-49c5-4769-9ce2-9e1e1e8beafa" />
   <br>
   <sup><em>Stored Procedures en SQL</em></sup>
 </div>
@@ -331,7 +331,7 @@
 ## Unidad Temática N.º 8 - Seguridad e Integridad de las Bases de Datos
 
 <div align="center">
-  <img src="https://notasinformaticas.com/wp-content/uploads/2018/04/Infografia_seguridad_base_datos.png" alt="Seguridad de Bases de Datos" width="550" />
+  <img width="700" alt="Seguridad de Bases de Datos" src="https://github.com/user-attachments/assets/af6707a7-4650-4688-92e6-f9e1f21e403c" />
   <br>
   <sup><em>Gestión de seguridad y control de acceso</em></sup>
 </div>
@@ -382,14 +382,14 @@
 ## Unidad Temática N.º 10 - Bases de Datos Avanzadas
 
 <div align="center">
-  <img src="https://instagram.fepa2-1.fna.fbcdn.net/v/t51.82787-15/585223136_17849432763600313_2431177948249366623_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=Mzc3NTk4NTEwNDc5NTUxODc0MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=FA-AsenfjR0Q7kNvwGHeuKp&_nc_oc=AdqdDUqGx8McFMvFRBJfsKSOx9SivGiexJmEIAn9bXif6LAN3U-93uQpSkhzk1-oJEwIHahNxOPtoaff6ohbgn9a&_nc_zt=23&_nc_ht=instagram.fepa2-1.fna&_nc_gid=ucNc5pR77HhmNi7tgd4Bdw&_nc_ss=7b6a8&oh=00_AQSdVtihlO7RQUXmAF3TIvCnLZNoQNPv3JJ9IhZ6_O4ecg&oe=6AFC5E58" alt="Tipos de Bases de Datos" width="550" />
+  <img width="700" alt="Tipos de Bases de Datos" src="https://github.com/user-attachments/assets/1df75c80-5516-4c76-aaee-1f6cd5bdff7a" />
   <br>
   <sup><em>Ecosistema de Bases de Datos Modernas</em></sup>
 </div>
 <br>
 
 <div align="center">
-  <img src="https://image.slidesharecdn.com/infografabasesdedatosespaciales-231010042821-ab5d3714/75/Infografia-bases-de-datos-espaciales-pdf-1-2048.jpg" alt="Bases de Datos Espaciales" width="550" />
+  <img width="700" alt="Bases de Datos Espaciales" src="https://github.com/user-attachments/assets/31d6868d-d4ac-4b96-9fa5-aa3a3d0dd7f7" />
   <br>
   <sup><em>Conceptos de Bases de Datos Espaciales</em></sup>
 </div>
