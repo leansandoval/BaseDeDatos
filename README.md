@@ -298,14 +298,14 @@
 ## Unidad Temática N.º 7 - Transacciones y Control de Concurrencia
 
 <div align="center">
-  <img src="https://scontent.faep28-2.fna.fbcdn.net/v/t39.99422-6/735222803_1031400872722762_4435234212974793794_n.png?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=s1024x1536&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG2Ujodx5GaM5Xkj66fg5MCCZ6-3psZ9uUJnr7emxn25VCnoykTwvSj5Q1lR-2jBgwH8Tunz-E4IKk-km6lnKBv&_nc_ohc=nOUrJ7OjYEcQ7kNvwHon35T&_nc_oc=AdpchmrZ2vzV_uCQhsWNZrds18Ye1C0OpF2HBrE-A4EcE32zlXDlgZ7ycG5MGLmME6-_dW_k-t-F7YAo65sumJCo&_nc_zt=14&_nc_ht=scontent.faep28-2.fna&_nc_gid=81IPWmjGc-UWtuzQwLkvIg&_nc_ss=7b2a8&oh=00_AQTxWj45vF_na48IbmAaZZmF5faeb813VTLrcY0zoR0tjQ&oe=6AF88FDF" alt="Transacciones" width="350" />
+  <img width="700" alt="Transacciones" src="https://github.com/user-attachments/assets/d0e58794-5a59-4d15-8020-d71d93faaf93" />
   <br>
   <sup><em>Ciclo de vida de una transacción</em></sup>
 </div>
 <br>
 
 <div align="center">
-  <img src="https://instagram.faep28-2.fna.fbcdn.net/v/t39.30808-6/715910533_122281530692189612_4279460914672464774_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=MzkxNDM1OTQ1NzIyNDU4NTExMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI1NC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=Nh7HW8lAT1sQ7kNvwFoUpiA&_nc_oc=AdolP58WI_C56ycTCuoIx3YHWUhwKFCL3cXxq95KLjD4Y3FkK-vS70UYC8-gHL9bqJUG8bIYKD8LNQyAzbz_cotF&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.faep28-2.fna&_nc_gid=VA2ACOLFLvgnU43c-V4Ovg&_nc_ss=7a22e&oh=00_AQQeLgLz6miQsZN6Sn2IptYi9zMqKw9Gw9uWzcqQfTAe8A&oe=6AFC3497" alt="Locking en Bases de Datos" width="550" />
+  <img width="700" alt="Locking en Bases de Datos" src="https://github.com/user-attachments/assets/92af2fb0-856c-4658-9ff8-8d14af54b2ec" />
   <br>
   <sup><em>Mecanismos de bloqueo y concurrencia</em></sup>
 </div>
