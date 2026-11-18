@@ -192,9 +192,9 @@
 
 ### Subconsultas
 <div align="center">
-  <img  width="700" alt="Subconsultas" src="https://scontent.faep28-2.fna.fbcdn.net/v/t39.30808-6/706202814_1444183997725075_1684298045250782611_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=s1024x1536&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEC6Q48auNIFPFClh6rupOxDcqhk0waX-QNyqGTTBpf5ByFize_pPCs9DI25uwGglEL3KQdu0s3xckhlQ-Vsfxp&_nc_ohc=TF2TjLZ6e0cQ7kNvwGW1OD_&_nc_oc=Adq1PNK42jsQhaikGLdIRQNOVM6tLEW_dW8V9CRj-xSb4aDigLGldJpND-STS5se0JU235Fl6celTZr9Le7N9h3C&_nc_zt=23&_nc_ht=scontent.faep28-2.fna&_nc_gid=DXF2Z6pojx4lS_s8CbJ-QQ&_nc_ss=7b2a8&oh=00_AQRx26laEfpZZqrIAQbcPnZvYbwmwHx9ac_PPhWo5eXQYA&oe=6AF895BB" />
+  <img width="700" alt="Subconsultas" src="https://github.com/user-attachments/assets/e5e767a0-b801-42d9-9a76-bc591fe2b72f" />
   <br>
-  <sup><em>Ejemplo de subconsultas anidadas</em></sup>
+  <sup><em>Ejemplos de subconsultas</em></sup>
 </div>
 <br>
 
