@@ -192,7 +192,7 @@
 
 ### Subconsultas
 <div align="center">
-  <img src="https://scontent.faep28-2.fna.fbcdn.net/v/t39.30808-6/706202814_1444183997725075_1684298045250782611_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=s1024x1536&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEC6Q48auNIFPFClh6rupOxDcqhk0waX-QNyqGTTBpf5ByFize_pPCs9DI25uwGglEL3KQdu0s3xckhlQ-Vsfxp&_nc_ohc=TF2TjLZ6e0cQ7kNvwGW1OD_&_nc_oc=Adq1PNK42jsQhaikGLdIRQNOVM6tLEW_dW8V9CRj-xSb4aDigLGldJpND-STS5se0JU235Fl6celTZr9Le7N9h3C&_nc_zt=23&_nc_ht=scontent.faep28-2.fna&_nc_gid=DXF2Z6pojx4lS_s8CbJ-QQ&_nc_ss=7b2a8&oh=00_AQRx26laEfpZZqrIAQbcPnZvYbwmwHx9ac_PPhWo5eXQYA&oe=6AF895BB" alt="Subconsultas" width="350" />
+  <img  width="700" alt="Subconsultas" src="https://scontent.faep28-2.fna.fbcdn.net/v/t39.30808-6/706202814_1444183997725075_1684298045250782611_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=s1024x1536&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEC6Q48auNIFPFClh6rupOxDcqhk0waX-QNyqGTTBpf5ByFize_pPCs9DI25uwGglEL3KQdu0s3xckhlQ-Vsfxp&_nc_ohc=TF2TjLZ6e0cQ7kNvwGW1OD_&_nc_oc=Adq1PNK42jsQhaikGLdIRQNOVM6tLEW_dW8V9CRj-xSb4aDigLGldJpND-STS5se0JU235Fl6celTZr9Le7N9h3C&_nc_zt=23&_nc_ht=scontent.faep28-2.fna&_nc_gid=DXF2Z6pojx4lS_s8CbJ-QQ&_nc_ss=7b2a8&oh=00_AQRx26laEfpZZqrIAQbcPnZvYbwmwHx9ac_PPhWo5eXQYA&oe=6AF895BB" />
   <br>
   <sup><em>Ejemplo de subconsultas anidadas</em></sup>
 </div>
@@ -223,7 +223,7 @@
 <br>
 
 <div align="center">
-  <img src="https://doc-assets.studocu.com/b0df6515adcb90e6d054c7544028f6ba/html/bg1.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2RvYy1hc3NldHMuc3R1ZG9jdS5jb21cL2IwZGY2NTE1YWRjYjkwZTZkMDU0Yzc1NDQwMjhmNmJhXC9odG1sXC8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk0ODg2OTY5fX19XX0_&Signature=Htnnq4jhNTK21DFSxlbnvNR62~ESwkGYWRUZj5U4O7WhbDCT6rAf3vcsEagXuMNkad3RM1Y0bTTr~BxiXBw3jks4T5AvfnpIWlDR9VJhgRRKH898-HJjbKZqOaB16u6vGw05g2ARxiXUIlSNCPnxbJwTHVkpozc-5UFYax2jrBD-WJmdpT29yHmoWUU0GrvRkN0moO0vbU1M06-LBzH0PkArUn6fPyk1y7XkaURWEXhHEX8B8JTj6pxxZVsdWACnos6BsU1rg~enWaz6hxrJVqGqfnlIjo723zbZfuhU3J8UgKz-Y2sXmIXjvy8m5pGMfDrvTE2lq1rsOQaCcN0NSQ__&Key-Pair-Id=APKAJ535ZH3ZAIIOADHQ" alt="Triggers" width="450" />
+  <img width="700" alt="Triggers" src="https://github.com/user-attachments/assets/3d902d8f-5293-4e83-999a-df2d87513376" />
   <br>
   <sup><em>Triggers en SQL</em></sup>
 </div>
@@ -237,14 +237,14 @@
 <br>
 
 <div align="center">
-  <img src="https://instagram.fepa2-1.fna.fbcdn.net/v/t51.82787-15/784616545_17905165230503795_416882920990780148_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=Mzk3MjM2OTAxNzkwNzE5Njk3Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQwNC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=dAiYQFijItQQ7kNvwGQWs6N&_nc_oc=Adp954dqIEYU0l25UvOur63BGznpWA71jDCifqwsbxfNg6A9JgnzC0s50wwihn2tMFg3Ywe-mlbcGh7kCfxH7b3s&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fepa2-1.fna&_nc_gid=a5T9axLFDxERkmQ5h8f0Yg&_nc_ss=7a22e&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSOFT7b27yWY8zZuOhq9MDUh9vHkPOpiZ7bfi08vtz-hw&oe=6B006204" alt="CTE vs Subconsultas" width="450" />
+  <img width="700" alt="CTE vs Subconsultas" src="https://github.com/user-attachments/assets/43820f30-6d79-49e2-8926-bedd9c924789" />
   <br>
   <sup><em>CTE vs Subconsultas</em></sup>
 </div>
 <br>
 
 <div align="center">
-  <img src="https://instagram.fepa1-1.fna.fbcdn.net/v/t39.30808-6/715442929_122281526450189612_8749987936720633822_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ig_cache_key=MzkxMzU3NDQyMzMyNzczNjI3Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI1NC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=23_wtbIhwwcQ7kNvwHVImG6&_nc_oc=AdogPVxmeIb7Sgl3BnPb0QOPYyjIEAy4PiJxmT5sXTxSDdB7hXysMclCyBtirWbH6khrS9c41WXwoAQSuNL_mjGh&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fepa1-1.fna&_nc_gid=bpndQllIYuZzYHmQTutHvw&_nc_ss=7a22e&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQJW9Ky84nEkr0yC_ScGmh0orEdB9tMGZv0XLGDVx0iRg&oe=6B004686" alt="Índices" width="450" />
+  <img width="700" alt="Índices" src="https://github.com/user-attachments/assets/81546999-db1a-49f9-b8c0-a206b71a5e88" />
   <br>
   <sup><em>Índices en SQL</em></sup>
 </div>
@@ -259,7 +259,7 @@
 
 ### Vistas
 <div align="center">
-  <img src="https://scontent.fepa1-1.fna.fbcdn.net/v/t39.30808-6/480741654_613163444912518_5324162054683845899_n.jpg?stp=dst-jpg_tt6&cstp=mx1782x2048&ctp=s1782x2048&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEacyydnZbP4JFBpMse60Cpbdoca7hBOiBt2hxruEE6IEoqN0jMfheBixkUZUxU7rf8KGJLIFjHCyt9JHnwQGdK&_nc_ohc=S79PiS8hyuMQ7kNvwHII99Z&_nc_oc=Adrq_hu1f079jUXEx8Ayk2IbqU_g5-yb21NwOFWWJzkizQyDEoc50u0AXmZDO3LsJdPvEKXnK9WHJygk6Ag0--dp&_nc_zt=23&_nc_ht=scontent.fepa1-1.fna&_nc_gid=czhKCrDlh6_IMwMz5sTJKw&_nc_ss=7b2a8&oh=00_AQQdO8zoQmH3Yoj6RGZd4iCForJrCLuomgcJTrWUftrSDg&oe=6AF86AEF" alt="Vistas SQL" width="550" />
+  <img width="700" alt="Vistas SQL" src="https://github.com/user-attachments/assets/5928892d-4809-4e3e-a13c-c8e0dc28cf9c" />
   <br>
   <sup><em>Abstracción de datos mediante vistas</em></sup>
 </div>
@@ -278,7 +278,7 @@
 ## Unidad Temática N.º 6 - Procesamiento y Optimización de Consultas
 
 <div align="center">
-  <img src="https://scontent.faep28-1.fna.fbcdn.net/v/t39.30808-6/490152007_1230345149091347_2128454070160642628_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x2000&ctp=s1200x2000&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEo79K43Q2U8RjXqMq9wVn-W-m3eZgBX3Vb6bd5mAFfdbOCLNcO8uhHJPZRJ-uHiBls5KhUdCpe8n60RKdL2KZq&_nc_ohc=QyrtYaGZMSsQ7kNvwGp5_oq&_nc_oc=AdpF-cWWuHz1FyY2OTfmAT3x6oleuPe2OkZw8ghJF3IV5BcXHBzfcGkFEPXu_xi-cheKvZQJQsMOhHQMGuKBZQrb&_nc_zt=23&_nc_ht=scontent.faep28-1.fna&_nc_gid=KtKoEUkvieBqy9oN3aJxsg&_nc_ss=7b2a8&oh=00_AQRzOK2JnlYXSIymMoVx9RLakibTEB0p2ognSsM0_SP1HQ&oe=6AFC3F88" alt="Estrategias para Optimizar Consultas SQL" width="350" />
+  <img width="700" alt="Estrategias para Optimizar Consultas SQL" src="https://github.com/user-attachments/assets/3b21ba4c-f158-474d-a79c-d10776c20e00" />
   <br>
   <sup><em>Proceso de Optimización de Consultas</em></sup>
 </div>
@@ -338,14 +338,14 @@
 <br>
 
 <div align="center">
-  <img src="https://instagram.faep28-1.fna.fbcdn.net/v/t51.71878-15/767617831_1597484661931742_6873049211020578777_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=Mzk1OTYzOTQ3MDk2OTQwMTIyNjE2NjIxODk2OTU0NzE4ODc%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjY0MC5zZHIudmlkZW9fdXNlcl9zZWxlY3RlZF90aHVtYm5haWwuQzMifQ%3D%3D&_nc_ohc=A_1TyHpl824Q7kNvwENx1tr&_nc_oc=Adq8modQhUUGVsNve_gCd3JWLgO6IvFo4G-scsVUlc-PXUeDtv0FZ7VKuDIDI0JWf8AXsOgviGjQU_94yyfRRDV5&_nc_zt=23&_nc_ht=instagram.faep28-1.fna&_nc_gid=k6cP0FQNABNkmYWEhpWL4Q&_nc_ss=7b6a8&_nc_ct=RQosPBUIFQ4lBAAAAA&oh=00_AQQQxnG6n9MBXtRjvDig4XXqrm7lHEhIGY2NpSvZ3dXX2A&oe=6B003CC2" alt="DCL" width="550" />
+  <img width="700" height="1050" alt="DCL" src="https://github.com/user-attachments/assets/1e41932e-ad86-4457-95ed-513ecc2c82de" />
   <br>
   <sup><em>DCL - Data Control Language</em></sup>
 </div>
 <br>
 
 <div align="center">
-  <img src="https://instagram.fepa2-1.fna.fbcdn.net/v/t51.75761-15/479160482_18047276459216593_6606635892535944524_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=MzU2NzM2MDI2MDczMTIzMTExNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=aEuoGlAQOGUQ7kNvwHHHniL&_nc_oc=Adqe1NHmZbqiWkZVz4N4LbJYA2L7JVW2lcfoN0Ar_QBDKTwE1tBJLbfdG5cpkWc1_Bqh3jC83s0xfxtv3zjZAomg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fepa2-1.fna&_nc_gid=AAc4IIe0IJ1Y-DuP4JSNwA&_nc_ss=7a22e&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQfJh4dhcZ-Nd8sWmlrZoi1kCniUjQ_WfdmBLrFvrjLSw&oe=6B004A8A" alt="DCL Ejemplos" width="550" />
+  <img width="700" alt="DCL Ejemplos" src="https://github.com/user-attachments/assets/6fba79e0-c4a4-42b0-8576-d4dd953918f0" />
   <br>
   <sup><em>DCL - Ejemplos</em></sup>
 </div>
@@ -364,7 +364,7 @@
 ## Unidad Temática N.º 9 - Sistemas de Bases de Datos Distribuidas
 
 <div align="center">
-  <img src="https://instagram.faep28-2.fna.fbcdn.net/v/t39.30808-6/778985268_1340771434746197_1413887008391237872_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=Mzk3MTY4NzAzOTIwMTQwNTg2MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI4MC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=TsgjQ8o_WqcQ7kNvwGpolFv&_nc_oc=Adof2-RkYZ8KuIfBCUk4YxSrynPDBOyNS_VwiyrZtJRs6TVWJ0wXHulw31D7XySU3ELm8Q7dKYl1SixwKCVsI03E&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.faep28-2.fna&_nc_gid=CfRHU2dNkrF1EcVIEsavvw&_nc_ss=7a22e&oh=00_AQRHjRN4USpQcZobnhdc_tpO8NB7NNdLJeiFbBbiUsSrOw&oe=6AFC45B5" alt="Sistemas de Bases de Datos Distribuidas" width="550" />
+  <img width="700" alt="Sistemas de Bases de Datos Distribuidas" src="https://github.com/user-attachments/assets/d41fc462-709b-4420-9e9e-809ff5abbe42" />
   <br>
   <sup><em>Arquitectura de un entorno distribuido</em></sup>
 </div>
